@@ -1,0 +1,10 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.container_signup {
+    background-color: red;
+    height: 50vh;
+    width: 50vh;
+}
