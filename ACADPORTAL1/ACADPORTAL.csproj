@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin panel.html" />
+    <Content Include="Attendence.aspx" />
     <Content Include="home.aspx" />
     <Content Include="Homepage.aspx" />
     <Content Include="login.css" />
@@ -75,8 +77,16 @@
     <Content Include="signup.css" />
     <Content Include="signup.html" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attendence.aspx.cs">
+      <DependentUpon>Attendence.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendence.aspx.designer.cs">
+      <DependentUpon>Attendence.aspx</DependentUpon>
+    </Compile>
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -103,6 +113,13 @@
     </Compile>
     <Compile Include="signup.html.designer.cs">
       <DependentUpon>signup.html.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
