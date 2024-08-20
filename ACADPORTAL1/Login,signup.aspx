@@ -55,7 +55,9 @@
     <form id="form1" runat="server">
         <div>
             <p id="p1" style="margin-left: 480px; width: 560px;">
-               <h1> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ACADPORTAL: CLASSIC TO SMART DEPARTMENT</h1></p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ACADPORTAL: CLASSIC TO SMART DEPARTMENT
+
+            </p>
             </div>
             <table>
                 <tr><td class="auto-style8"><div class="auto-style4">
@@ -73,7 +75,7 @@
                         <br />
                         <br />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-                        <asp:Button ID="Button2" runat="server" Text="Log in" CssClass="auto-style11" Height="51px" Width="167px" />
+                        <asp:Button ID="Button2" runat="server" Text="Log in" CssClass="auto-style11" Height="51px" Width="167px" OnClick="Button2_Click1" />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<a href="https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwimnabIgfSHAxUIXWwGHTi9AHYQPAgJ">New User? Create your account</a>
                         <br />
@@ -87,7 +89,7 @@
                                 smart solutions that enhance teaching, learning, and administrative efficiency.
 
                             </p>
-                        </div width="100px">
+                        </div >
                     </td>
                 </tr>
                 <tr><td>&nbsp;</td>
