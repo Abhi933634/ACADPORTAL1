@@ -1,9 +1,6 @@
-﻿<asp:Timer runat="server"></asp:Timer>
-
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Homepage.aspx.cs" Inherits="ACADPORTAL1.Homepage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm2.aspx.cs" Inherits="ACADPORTAL1.WebForm2" %>
 
 <!DOCTYPE html>
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">

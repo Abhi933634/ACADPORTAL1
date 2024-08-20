@@ -7,14 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace ACADPORTAL1
 {
-    public partial class home : System.Web.UI.Page
+    public partial class WebForm2 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button5_Click(object sender, EventArgs e)
         {
 
         }
