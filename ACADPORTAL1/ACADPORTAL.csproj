@@ -70,12 +70,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Home-teacher.aspx" />
     <Content Include="Login,signup.aspx" />
+    <Content Include="Login,signup.css" />
     <Content Include="photus\AP.png" />
     <Content Include="photus\R.jpeg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Home-teacher.aspx.cs">
+      <DependentUpon>Home-teacher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home-teacher.aspx.designer.cs">
+      <DependentUpon>Home-teacher.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login,signup.aspx.cs">
       <DependentUpon>Login,signup.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
