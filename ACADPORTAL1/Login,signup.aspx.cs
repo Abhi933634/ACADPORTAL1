@@ -12,9 +12,17 @@ namespace ACADPORTAL1
 {
     public partial class Login_signup : System.Web.UI.Page
     {
+
+        SqlConnection con = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=AcadPortal;Integrated Security=True;Encrypt=False");
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
+            con.Open();
+ 
+           
         }
 
         protected void TextBox1_TextChanged(object sender, EventArgs e)
@@ -37,46 +45,25 @@ namespace ACADPORTAL1
 
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void Button2_Click1(object sender, EventArgs e)
         {
-            if (TextBox1.Text == "" && TextBox2.Text == "")
+            if (TextBox1.Text == "" || TextBox1.Text == " ")
             {
                 MessageBox.Show("Please fill up all fields");
             }
 
-            try
+            if (TextBox2.Text == "" || TextBox2.Text == " ")
             {
-                string username, password;
-               
-                SqlConnection SqlConnection = new SqlConnection();
-
-                SqlCommand; cmd = new SqlCommand("select * from login where username = @username and password = @password");
-                cmd.Parameters.AddWithValue("@username", TextBox1.Text);
-                cmd.Parameters.AddWithValue("@password", TextBox2.Text);
-
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-
-                da.Fill(dt);
-
-                if (dt.Rows.Count > 0)
-                {
-                    MessageBox.Show(" User is successfully logged in");
-                }
-                else
-                {
-                    MessageBox.Show("Login unsuccessful");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("" + ex);
+                MessageBox.Show("Please fill up all fields");
             }
 
-            if (TextBox2.Text == "")
-            {
-                MessageBox.Show("Please fill up password");
-            }
+            SqlCommand cmd= con.CreateCommand();
+            cmd.CommandType= CommandType.Text;
+            cmd.CommandText = "insert into login values('" + TextBox1.Text + "','" + TextBox2.Text + "')";
+            cmd.ExecuteNonQuery();
+            TextBox1.Text = "";
+            TextBox2.Text = "";
+
 
 
 

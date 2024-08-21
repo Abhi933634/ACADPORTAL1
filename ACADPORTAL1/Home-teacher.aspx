@@ -306,13 +306,13 @@
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
     <div class="numbertext">1 / 3</div>
-    <img src="photus/AP.png" style="width:100%"/>
+    <img src="photus/AP.png" style="width:25%"/>
     <div class="text">Caption Text</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">2 / 3</div>
-    <img src="photus/R.jpeg" style="width:100%"/>
+    <img src="photus/R.jpeg" style="width:25%"/>
     <div class="text">Caption Two</div>
   </div>
 
@@ -328,9 +328,7 @@
 <div style="text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span>
   <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
 </div>
 
-
-    </body>
+        </body>
 </html>
