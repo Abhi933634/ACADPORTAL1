@@ -47,7 +47,7 @@ namespace ACADPORTAL1
 
         protected void Button2_Click1(object sender, EventArgs e)
         {
-            if (TextBox1.Text == "" || TextBox1.Text == " ")
+          /*  if (TextBox1.Text == "" || TextBox1.Text == " ")
             {
                 MessageBox.Show("Please fill up all fields");
             }
@@ -62,7 +62,7 @@ namespace ACADPORTAL1
             cmd.CommandText = "insert into login values('" + TextBox1.Text + "','" + TextBox2.Text + "')";
             cmd.ExecuteNonQuery();
             TextBox1.Text = "";
-            TextBox2.Text = "";
+            TextBox2.Text = "";*/
 
 
 
