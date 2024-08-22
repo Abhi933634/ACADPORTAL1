@@ -7,48 +7,7 @@
     <title></title>
     <link  rel="stylesheet" href="Login,signup.css"/>
     <style type="text/css">
-        #Text1 {
-            height: 0px;
-            width: 361px;
-            margin-left: 220px;
-        }
-        .auto-style1 {
-            width: 535px;
-        }
-        .auto-style2 {
-            width: 445px;
-            height: 447px;
-            margin-left: 66px;
-        }
-        .auto-style4 {
-            width: 388px;
-            height: 600px;
-        }
-        .auto-style5 {
-            margin-left: 54px;
-            margin-top: 31px;
-        }
-        .auto-style6 {
-            margin-left: 55px;
-        }
-        .auto-style7 {
-            width: 497px;
-            height: 483px;
-        }
-        .auto-style8 {
-            height: 483px;
-        }
-        .auto-style9 {
-            width: 535px;
-            height: 483px;
-        }
-        .auto-style10 {
-            height: 508px;
-            margin-top: 0px;
-        }
-        .auto-style11 {
-            margin-left: 0px;
-        }
+     
     </style>
 </head>
 <body>
@@ -77,7 +36,10 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
                         <asp:Button ID="Button2" runat="server" Text="Log in" CssClass="auto-style11" Height="51px" Width="167px" OnClick="Button2_Click1" />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<a href="Home-teacher.aspx" > New User? Create your account</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<a href="Signup.aspx">New User? Create your account</a>
+
                         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
                     <td class="auto-style7">
