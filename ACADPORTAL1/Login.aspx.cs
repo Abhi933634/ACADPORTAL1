@@ -47,22 +47,6 @@ namespace ACADPORTAL1
 
         protected void Button2_Click1(object sender, EventArgs e)
         {
-          /*  if (TextBox1.Text == "" || TextBox1.Text == " ")
-            {
-                MessageBox.Show("Please fill up all fields");
-            }
-
-            if (TextBox2.Text == "" || TextBox2.Text == " ")
-            {
-                MessageBox.Show("Please fill up all fields");
-            }
-
-            SqlCommand cmd= con.CreateCommand();
-            cmd.CommandType= CommandType.Text;
-            cmd.CommandText = "insert into login values('" + TextBox1.Text + "','" + TextBox2.Text + "')";
-            cmd.ExecuteNonQuery();
-            TextBox1.Text = "";
-            TextBox2.Text = "";*/
 
 
 

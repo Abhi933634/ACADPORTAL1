@@ -73,14 +73,15 @@
   <ItemGroup>
     <Content Include="Home-teacher.aspx" />
     <Content Include="Home-teacher.css" />
-    <Content Include="Login,signup.aspx" />
-    <Content Include="Login,signup.css" />
+    <Content Include="Login.aspx" />
+    <Content Include="Login.css" />
     <Content Include="photus\AP.png" />
     <Content Include="photus\R.jpeg" />
     <Content Include="Signup.aspx" />
     <Content Include="Signup.css" />
     <Content Include="Signup.js" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Home-teacher.aspx.cs">
@@ -90,12 +91,12 @@
     <Compile Include="Home-teacher.aspx.designer.cs">
       <DependentUpon>Home-teacher.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login,signup.aspx.cs">
-      <DependentUpon>Login,signup.aspx</DependentUpon>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login,signup.aspx.designer.cs">
-      <DependentUpon>Login,signup.aspx</DependentUpon>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Signup.aspx.cs">
@@ -104,6 +105,13 @@
     </Compile>
     <Compile Include="Signup.aspx.designer.cs">
       <DependentUpon>Signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
