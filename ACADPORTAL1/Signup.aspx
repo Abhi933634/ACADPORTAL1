@@ -124,7 +124,7 @@
 
 
 <tr>
-<td> Select Course :</td> </br>
+<td> Select Course :</td> <br/>
 <td>
     <asp:DropDownList ID="DropDownList1" runat="server" Width="110px">
         <asp:ListItem>BCA</asp:ListItem>
