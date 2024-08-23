@@ -5,15 +5,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Signup!</title>
-    <link  rel="stylesheet" href="Login,signup.css"/>
+    <link  rel="stylesheet" href="Login.css"/>
 	<script src="Signup.js"></script>
+    <style type="text/css">
+        .auto-style12 {
+            width: 132px;
+        }
+    </style>
 </head>
 <body>
     
-        <div>
+        <asp:div>
             <p id="p1" style="margin-left: 480px; width: 560px;">
                <h1> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ACADPORTAL: CLASSIC TO SMART DEPARTMENT</h1></p>
-            </div>
+            </asp:div>
             <table>
                 <tr><td class="auto-style8"><div class="auto-style4">
                     
@@ -21,106 +26,104 @@
                     
                     </div></td>
                     <td class="auto-style9">
-</head>
 
-<body>
 
 
 
 	<form id="form1" runat="server">
 
-<table align = "center" cellpadding="9">
+                    <table align = "center" cellpadding="9">
 
-<tr>
-<td> Name : </td>
-<td>
-<input type = "text" name = "First_Name" placeholder="First Name" />
-</td>
-</tr>
+                    <tr>
+                    <td> Name : </td>
+                    <td>
+                    <input type = "text" name = "First_Name" placeholder="First Name" />
+                    </td>
+                    </tr>
 
-<tr>
-<td> Father&#39;s Name : </td>
-<td>
-	<input type = "text" name ="Last_Name" placeholder="Last Name" />
-</td>
+                    <tr>
+                    <td> Father&#39;s Name : </td>
+                    <td>
+	                    <input type = "text" name ="Last_Name" placeholder="Last Name" />
+                    </td>
 
-</tr>
+                    </tr>
 
-<tr>
-	<td> Gender : </td>
-	<td> Male
-		<input type="radio" name="Gender" value="male" /> 
-	Female
+                    <tr>
+	                    <td> Gender : </td>
+	                    <td> Male
+		                    <input type="radio" name="Gender" value="male" /> 
+	                    Female
  
- <input type="radio" name="Gender" value="female" />
-	</td>
-</tr>
+                     <input type="radio" name="Gender" value="female" />
+	                    </td>
+                    </tr>
 
-<tr>
-	<td> Date of birth : </td>
-	<td> <input type="date" id="birthdaytime" name="birthdaytime"/></td>
-</tr>
-<tr>
-	<td> Moblie No. </td>
-<td>
-      <input type="text" name="Mobile" placeholder="Moblie Number" />
-</td>
-</tr>
+                    <tr>
+	                    <td> Date of birth : </td>
+	                    <td> <input type="date" id="birthdaytime" name="birthdaytime"/></td>
+                    </tr>
+                    <tr>
+	                    <td> Moblie No. </td>
+                    <td>
+                          <input type="text" name="Mobile" placeholder="Moblie Number"  />
+                    </td>
+                    </tr>
 
-<tr>
-	<td> Email : </td>
-	<td> <input type="text" name="Email" placeholder="Email Id" />
-	</td>
-</tr>
-    <tr>
-	<td> User Name : </td>
-	<td> <input type="text" name="Email" placeholder="Email Id" />
-	</td>
-</tr>
+                    <tr>
+	                    <td> Email : </td>
+	                    <td> <input type="text" name="Email" placeholder="Email Id"  />
+	                    </td>
+                    </tr>
+                        <tr>
+	                    <td> User Name : </td>
+	                    <td> <input type="text" name="Email" placeholder="user name" />
+	                    </td>
+                    </tr>
 
-<tr>
-	<td> Password : </td>
-	<td><input type="password" name="Password" placeholder="Password" />
-	</td>
-</tr>
+                    <tr>
+	                    <td> Password : </td>
+	                    <td><input type="password" name="Password" placeholder="Password" />
+	                    </td>
+                    </tr>
 
 
-<tr>
-	<td> Address : </td>
+                    <tr>
+	                    <td> Address : </td>
 
-<td>
-	<textarea name = "Address" rows="5" cols="20" placeholder="Address" />
+                    <td>
+	                    <textarea name = "Address" rows="5" cols="20" placeholder="Address" />
 		
-	</textarea>
-</td>
+	                    </textarea>
+                    </td>
 
-</tr>
+                    </tr>
 
-<tr>
-	<td> City :</td>
+                    <tr>
+	                    <td> City :</td>
 
-<td>
-	<input type="text" name="city" placeholder="City" />
-</td>
+                    <td>
+	                    <input type="text" name="city" placeholder="City" />
+                    </td>
 
-</tr>
-
-
-<tr>
-	<td> State : </td>
-<td>
-	<input type="text" name="state" placeholder="State" />
-</td>
-
-</tr>
+                    </tr>
 
 
-<tr>
-	<td> Pin Code</td>
-	<td>
-		<input type="text" name="Country"  />
-	</td>
-</tr>
+                    <tr>
+	                    <td> State : </td>
+                    <td>
+	                    <input type="text" name="state" placeholder="State" />
+                    </td>
+
+                    </tr>
+
+
+                    <tr>
+	                    <td> Pin Code</td>
+	                    <td>
+		                    <input type="text" name="Country"  />
+	                    </td>
+                    </tr>
 
 
 <tr>
@@ -136,18 +139,18 @@
 </td>
 </tr>
 
-<tr>
-	<td align="right"> </td>
-	<td>
-&nbsp;<asp:Button ID="Button1" runat="server" Text="Submit" />
-</td>
-</tr>
+                    <tr>
+	                    <td align="right"> </td>
+	                    <td>
+                            <Button ID="Button1"  Text="Button" class="auto-style12" />
+                    </td>
+                    </tr>
 
 
-</table>
+                    </table>
 
-    </form>
-</td>
+            </form>
+    </td>
                     <td class="auto-style7">
                         <div class="auto-style10">
                             <h3> About Us !</h3>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home-teacher.aspx.cs" Inherits="ACADPORTAL1.Home_teacher" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home-teacher.aspx.cs" Inherits="ACADPORTAL1.Home_teacher" %>
 
 <!DOCTYPE html>
 
@@ -191,11 +191,33 @@ img {vertical-align: middle;}
     }
 
 </script>
-<<<<<<< Updated upstream
+
         
-=======
+
         <div class="slideshow-container">
 
+
+        <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="photus/AP.png" style="width:25%"/>
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="photus/R.jpeg" style="width:25%"/>
+    <div class="text">Caption Two</div>
+  </div>
+
+  
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
   <img src style="width:100%"/>
@@ -215,10 +237,17 @@ img {vertical-align: middle;}
 </div>
 
 </div>
->>>>>>> Stashed changes
+
 <br/>
 
 <div style="text-align:center">
+
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+</div>
+
+        </body>
+
   <span class="dot"></span> 
   <span class="dot"></span> 
   <span class="dot"></span> 

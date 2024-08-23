@@ -1,28 +1,40 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login,signup.aspx.cs" Inherits="ACADPORTAL1.Login_signup" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="ACADPORTAL1.Login_signup" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link  rel="stylesheet" href="Login,signup.css"/>
+    <link  rel="stylesheet" href="Login.css"/>
     <style type="text/css">
-     
+        .auto-style12 {
+            width: 367px;
+            height: 600px;
+        }
+        .auto-style13 {
+            width: 445px;
+            height: 447px;
+            margin-left: 18px;
+            background-color : aqua;
+            margin-top: 0px;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <p id="p1" style="margin-left: 480px; width: 560px;">
-               <h1> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ACADPORTAL: CLASSIC TO SMART DEPARTMENT</h1></p>
+                <h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ACADPORTAL: CLASSIC TO SMART DEPARTMENT</h1>
+
+            </p>
             </div>
             <table>
-                <tr><td class="auto-style8"><div class="auto-style4">
+                <tr><td class="auto-style8"><div class="auto-style12">
                     
-                    <asp:Image ID="Image1" runat="server" Height="323px" ImageUrl="~/photus/AP.png" Width="346px" />
+                    <asp:Image ID="Image1" runat="server" Height="479px" ImageUrl="~/photus/AP.png" Width="346px" />
                     
                     </div></td>
-                    <td class="auto-style9"><div class="auto-style2">
+                    <td class="auto-style9"><div class="auto-style13">
                         <asp:TextBox ID="TextBox1" runat="server" BackColor="#FED8ED" BorderColor="#FFCCFF" CssClass="auto-style5" Height="36px" OnTextChanged="TextBox1_TextChanged1" Width="231px" placeholder="USERNAME"></asp:TextBox>
                         <br />
                         <br />
@@ -32,10 +44,11 @@
                         <br />
                         <br />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-                        <asp:Button ID="Button2" runat="server" Text="Log in" CssClass="auto-style11" Height="51px" Width="167px" />
+                        <asp:Button ID="Button2" runat="server" Text="Log in" CssClass="auto-style11" Height="51px" Width="167px" OnClick="Button2_Click1" />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<a href="Signup.aspx">New User? Create your account</a>
-                        <br />
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<a href="Signup.aspx" > New User? Create your account</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
                     <td class="auto-style7">
                         <div class="auto-style10">
@@ -46,7 +59,7 @@
                                 smart solutions that enhance teaching, learning, and administrative efficiency.
 
                             </p>
-                        </div width="100px">
+                        </div >
                     </td>
                 </tr>
                 <tr><td>&nbsp;</td>
