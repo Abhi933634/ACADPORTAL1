@@ -23,7 +23,6 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <p id="p1" style="margin-left: 480px; width: 560px;">
                 <h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ACADPORTAL: CLASSIC TO SMART DEPARTMENT</h1>
 
             </p>
