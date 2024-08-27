@@ -122,57 +122,35 @@ body {font-family: Verdana, sans-serif;}
 img {vertical-align: middle;}
 
 
+        .auto-style3 {
+            width: 81px;
+            height: 24px;
+        }
+
+
+        .auto-style4 {
+            height: 186px;
+        }
+
+
     </style>
     
     </head>
-    <body>
+    <body style="height: 128px">
         <div class="scroll-left">
 <h1>WELCOME BACK ASHUTOSH</h1>
 </div>
-          <nav>
-              <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Attendence</a>
-  <a href="#">Notes</a>
-  <a href="#">Library</a>
-  <a href="#">Conference</a>
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                     <br />
-                  <br />
-                 <br />
-                  <br />
-    <a href="#">Logout</a>
-</div>
+          <nav class="auto-style4">
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;&nbsp;&nbsp;&nbsp; ACADPORTAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>&nbsp;<ul>
-            <li><a href="Home-teacher.aspx" class="auto-style1">&nbsp;&nbsp; Home</a></li>
+            <li><a href="Home-teacher.aspx" class="auto-style1">&nbsp; Home</a></li>
             <li>&nbsp; </li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-            <li><a href="blog.html" class="auto-style2">Attendence</a></li>
+                  <li><a href="blog.html" class="auto-style3">Attendence</a></li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </li>
             <li><a href="news.html" class="auto-style2">Notes</a></li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
             <li><a href="home.html">Time Table</a></li>
-            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </li>
+                  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </li>
             <li><a href="blog.html">Library</a></li>
             <li>&nbsp;</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
@@ -190,67 +168,13 @@ img {vertical-align: middle;}
         document.getElementById("mySidenav").style.width = "0";
     }
 
-</script>
-
-        
-
-        <div class="slideshow-container">
+</script> 
 
 
-        <!-- Slideshow container -->
-<div class="slideshow-container">
 
-  <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="photus/AP.png" style="width:25%"/>
-    <div class="text">Caption Text</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="photus/R.jpeg" style="width:25%"/>
-    <div class="text">Caption Two</div>
-  </div>
-
-  
-
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src style="width:100%"/>
-  <div class="text">Caption Text</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="img_snow_wide.jpg" style="width:100%"/>
-  <div class="text">Caption Two</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="img_mountains_wide.jpg" style="width:100%"/>
-  <div class="text">Caption Three</div>
-</div>
-
-</div>
-
-<br/>
-
-<div style="text-align:center">
-
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-</div>
 
         </body>
 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
-    </body>
+  
+
 </html>

@@ -77,6 +77,8 @@
     <Content Include="Login.css" />
     <Content Include="photus\AP.png" />
     <Content Include="photus\R.jpeg" />
+    <Content Include="Signups.aspx" />
+    <Content Include="Signups.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +97,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Signups.aspx.cs">
+      <DependentUpon>Signups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Signups.aspx.designer.cs">
+      <DependentUpon>Signups.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
