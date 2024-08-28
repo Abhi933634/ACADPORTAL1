@@ -71,8 +71,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Home-teacher.aspx" />
-    <Content Include="Home-teacher.css" />
     <Content Include="Login.aspx" />
     <Content Include="Login.css" />
     <Content Include="photus\AP.png" />
@@ -82,13 +80,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Home-teacher.aspx.cs">
-      <DependentUpon>Home-teacher.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home-teacher.aspx.designer.cs">
-      <DependentUpon>Home-teacher.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

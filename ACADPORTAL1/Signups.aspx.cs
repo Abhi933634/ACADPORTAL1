@@ -23,7 +23,7 @@ namespace ACADPORTAL1
             Mname = TextBox3.Text;
             Gender = TextBox3.Text;
             DateOfBirth = TextBox1.Text;
-            MobileNo = TextBox1.Text;
+            //MobileNo = Convert.ToInt32(txtmobile.Text);
             Emai = TextBox4.Text;
             Username = TextBox1.Text;
             Password = TextBox1.Text;
@@ -34,21 +34,21 @@ namespace ACADPORTAL1
             Course = TextBox1.Text;
             String query = "insert into Signup values(@Name,@Father'sName, @Gender, @DateOfBirth, @MobileNo, @Email, @Username, @Password, @Address, @City, @State, @Pincode, @Course)";
             SqlCommand cmd = new SqlCommand(query, con);
-            cmd.Parameters.AddWithValue("Name",);
-            cmd.Parameters.AddWithValue("Father'sName",);
-            cmd.Parameters.AddWithValue("Gender",);
-            cmd.Parameters.AddWithValue("DateOfBirth",);
-            cmd.Parameters.AddWithValue("MobileNo",);
-            cmd.Parameters.AddWithValue("Email",);
-            cmd.Parameters.AddWithValue("Username",);
-            cmd.Parameters.AddWithValue("Password",);
-            cmd.Parameters.AddWithValue("Address",);
-            cmd.Parameters.AddWithValue("City",);
-            cmd.Parameters.AddWithValue("State",);
-            cmd.Parameters.AddWithValue("Pincode",);
-            cmd.Parameters.AddWithValue("Course",);
+            //cmd.Parameters.AddWithValue("Name",);
+            //cmd.Parameters.AddWithValue("Father'sName",);
+            //cmd.Parameters.AddWithValue("Gender",);
+            //cmd.Parameters.AddWithValue("DateOfBirth",);
+            //cmd.Parameters.AddWithValue("MobileNo",);
+            //cmd.Parameters.AddWithValue("Email",);
+            //cmd.Parameters.AddWithValue("Username",);
+            //cmd.Parameters.AddWithValue("Password",);
+            //cmd.Parameters.AddWithValue("Address",);
+            //cmd.Parameters.AddWithValue("City",);
+            //cmd.Parameters.AddWithValue("State",);
+            //cmd.Parameters.AddWithValue("Pincode",);
+            //cmd.Parameters.AddWithValue("Course",);
             con.Open();
-            cmd.ExecuteNonQuery();
+           // cmd.ExecuteNonQuery();
 
 
 

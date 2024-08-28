@@ -47,9 +47,9 @@
                                 <tr>
                                     <td class="auto-style11">Gender :</td>
                                     <td class="auto-style12">
-                                        <asp:RadioButton ID="Male" runat="server" />
-                                        <asp:RadioButton ID="Female" runat="server" />
-                                        <asp:RadioButton ID="Other" runat="server" />
+                                        <asp:RadioButton ID="Male" runat="server" Text="Male" />
+                                        <asp:RadioButton ID="Female" runat="server" Text="Female" />
+                                        <asp:RadioButton ID="Other" runat="server" Text="Other" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -67,7 +67,9 @@
                                 </tr>
                                 <tr>
                                     <td class="auto-style6">Mobile no. :</td>
-                                    <td>&nbsp;</td>
+                                    <td>
+                                        <asp:TextBox ID="txtmobile" runat="server"></asp:TextBox>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style6">E-mail :</td>
