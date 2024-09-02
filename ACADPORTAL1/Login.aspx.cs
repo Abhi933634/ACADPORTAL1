@@ -7,21 +7,17 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Xml.Linq;
 
 namespace ACADPORTAL1
 {
     public partial class Login_signup : System.Web.UI.Page
     {
 
-        SqlConnection con = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=AcadPortal;Integrated Security=True;Encrypt=False");
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (con.State == ConnectionState.Open)
-            {
-                con.Close();
-            }
-            con.Open();
- 
            
         }
 
@@ -45,17 +41,32 @@ namespace ACADPORTAL1
 
         }
 
-        protected void Button2_Click1(object sender, EventArgs e)
+
+        protected void loginbtn_Click(object sender, EventArgs e)
         {
+            string cs = "Data Source=LAPTOP-2HMQEB1H\\SQLEXPRESS;Initial Catalog=AcadPortal;Integrated Security=True;Encrypt=False";
+            SqlConnection con = new SqlConnection(cs);
 
 
+            //string checkUser = "SELECT * FROM lgn_table where Unname = @uname and password = @pwd";
+            string query =" SELECT* FROM lgn_table where Unname = 'abc' and password = '23'";
 
+            SqlCommand cmd = new SqlCommand(query, con);
+            //cmd.Parameters.AddWithValue("@uname", TextBox1.Text);
+            //cmd.Parameters.AddWithValue("@pwd", TextBox2.Text);
+            con.Open();
+            int r = cmd.ExecuteNonQuery();
 
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-
+            if (r > 0)
+            {
+                Response.Write("Sign in successful");
+                Response.Redirect("Signups.aspx");
+            }
+            else
+            {
+                Response.Write("Details incorrect, Please try again");
+            }
+            con.Close();
         }
     }
 }

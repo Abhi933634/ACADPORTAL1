@@ -23,12 +23,13 @@ namespace ACADPORTAL1
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string Name, Fname, Mname, DOB, Gender, Dept, Eml, Add, State, City, Pincode, Pass, ConfPass;
+            string Name, Fname, Mname, Gender, Dept, Eml, Add, State, City, Pincode, Pass, ConfPass;
             long MobileNo;
             Name = TextBox1.Text;
             Fname = TextBox2.Text;
             Mname = TextBox3.Text;
-            //DOB = DateOfBirth.Text;
+            string DOB =(DropDownList2.SelectedValue + DropDownList3.SelectedValue + DropDownList4.SelectedValue);
+           
             if (Male.Checked == true)
             {
                 Gender = Male.Text;
@@ -42,9 +43,9 @@ namespace ACADPORTAL1
                 Gender=Other.Text;
             }
 
-           
+
             Dept = DropDownList1.Text;
-            MobileNo = Convert.ToInt32(txtmobile.Text);
+            MobileNo = Convert.ToInt64(txtmobile.Text);
             Eml = TextBox4.Text;
             Add = TextBox5.Text;
             State = TextBox6.Text;
@@ -56,26 +57,26 @@ namespace ACADPORTAL1
             {
                 con = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=AcadPortal;Integrated Security=True;Encrypt=False");
 
-                String query = "insert into Signup values(@Name,@Father'sName, @Mother'sName, @DateOfBirth ,@Gender, @Department,  @MobileNo, @Email, @Address, @State, @City, @Pincode, @Password, @ConfirmPassword)";
+                String query = "insert into Signup values(@Name,@FatherName, @MotherName, @DateOfBirth ,@Gender, @Department,  @MobileNo, @Email, @Address, @State, @City, @Pincode, @Password, @ConfirmPassword)";
                 SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("Name", Name);
-                cmd.Parameters.AddWithValue("Father'sName", Fname);
+                cmd.Parameters.AddWithValue("@Name", Name);
+                cmd.Parameters.AddWithValue("@FatherName", Fname);
 
-                cmd.Parameters.AddWithValue("Mother;sName", Mname);
-                //cmd.Parameters.AddWithValue("DateOfBirth", DOB);
-                cmd.Parameters.AddWithValue("Gender", Gender);
-                cmd.Parameters.AddWithValue("Department", Dept);
-                cmd.Parameters.AddWithValue("MobileNo", MobileNo);
-                cmd.Parameters.AddWithValue("Email", Eml);
-                cmd.Parameters.AddWithValue("Address", Add);
-                cmd.Parameters.AddWithValue("State", State);
-                cmd.Parameters.AddWithValue("City", City);
-                cmd.Parameters.AddWithValue("Pincode", Pincode);
-                cmd.Parameters.AddWithValue("Password", Pass);
-                cmd.Parameters.AddWithValue("ConfirmPassword", ConfPass);
+                cmd.Parameters.AddWithValue("@MotherName", Mname);
+                cmd.Parameters.AddWithValue("@DateOfBirth", DOB);
+                cmd.Parameters.AddWithValue("@Gender", Gender);
+                cmd.Parameters.AddWithValue("@Department", Dept);
+                cmd.Parameters.AddWithValue("@MobileNo", MobileNo);
+                cmd.Parameters.AddWithValue("@Email", Eml);
+                cmd.Parameters.AddWithValue("@Address", Add);
+                cmd.Parameters.AddWithValue("@State", State);
+                cmd.Parameters.AddWithValue("@City", City);
+                cmd.Parameters.AddWithValue("@Pincode", Pincode);
+                cmd.Parameters.AddWithValue("@Password", Pass);
+                cmd.Parameters.AddWithValue("@ConfirmPassword", ConfPass);
                 con.Open();
                 int r = cmd.ExecuteNonQuery();
-                if(r > 0)
+                if (r > 0)
                 {
                     Response.Write("one row inserted");
                 }
@@ -86,7 +87,7 @@ namespace ACADPORTAL1
             }
             catch (Exception ex)
             {
-                Response.Write(ex);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -94,6 +95,11 @@ namespace ACADPORTAL1
             }
 
 
+
+        }
+
+        protected void TextBox3_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

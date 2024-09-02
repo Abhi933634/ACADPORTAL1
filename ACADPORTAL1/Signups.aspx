@@ -7,9 +7,6 @@
     <title></title>
                  <h1 class="auto-style13">ACADPORTAL: CLASSIC TO SMART DEPARTMENT</h1>
                 <link href="Signups.css" rel="stylesheet"/>
-    <style type="text/css">
-      
-        </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -37,12 +34,29 @@
                                 <tr>
                                     <td class="auto-style6">Mother&#39;s name :</td>
                                     <td>
-                                        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox3" runat="server" OnTextChanged="TextBox3_TextChanged"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style6">Date of birth :</td>
-                                    <td><input type="date" id=" DateOfBirth" /></td>
+                                    <td>
+                                        <asp:DropDownList ID="DropDownList2" runat="server">
+                                            <asp:ListItem>Date</asp:ListItem>
+                                            <asp:ListItem>1</asp:ListItem>
+                                            <asp:ListItem>2</asp:ListItem>
+                                        </asp:DropDownList>
+                                        <asp:DropDownList ID="DropDownList3" runat="server">
+                                            <asp:ListItem>Month</asp:ListItem>
+                                            <asp:ListItem>1</asp:ListItem>
+                                            <asp:ListItem>2</asp:ListItem>
+                                            <asp:ListItem>3</asp:ListItem>
+                                        </asp:DropDownList>
+                                        <asp:DropDownList ID="DropDownList4" runat="server">
+                                            <asp:ListItem>Year</asp:ListItem>
+                                            <asp:ListItem>2010</asp:ListItem>
+                                            <asp:ListItem>2011</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style11">Gender :</td>
