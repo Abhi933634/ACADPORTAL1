@@ -13,6 +13,7 @@
         <div>
             <table class="auto-style3">
                 <tr>
+                    
                     <td class="auto-style1">
                         <asp:Image ID="Image1" runat="server" Height="580px" ImageUrl="~/photus/AP.png" Width="444px" />
                     </td>

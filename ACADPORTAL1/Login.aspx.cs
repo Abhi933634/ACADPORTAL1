@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Xml.Linq;
+using System.Reflection.Emit;
 
 namespace ACADPORTAL1
 {
@@ -42,31 +43,43 @@ namespace ACADPORTAL1
         }
 
 
+       
+
         protected void loginbtn_Click(object sender, EventArgs e)
         {
             string cs = "Data Source=LAPTOP-2HMQEB1H\\SQLEXPRESS;Initial Catalog=AcadPortal;Integrated Security=True;Encrypt=False";
             SqlConnection con = new SqlConnection(cs);
 
-
-            //string checkUser = "SELECT * FROM lgn_table where Unname = @uname and password = @pwd";
-            string query =" SELECT* FROM lgn_table where Unname = 'abc' and password = '23'";
-
-            SqlCommand cmd = new SqlCommand(query, con);
-            //cmd.Parameters.AddWithValue("@uname", TextBox1.Text);
-            //cmd.Parameters.AddWithValue("@pwd", TextBox2.Text);
-            con.Open();
-            int r = cmd.ExecuteNonQuery();
-
-            if (r > 0)
+            try
             {
-                Response.Write("Sign in successful");
-                Response.Redirect("Signups.aspx");
+                string username = TextBox1.Text;
+                string pass = TextBox2.Text;
+                con.Open();
+                string qry = "SELECT * FROM Signup WHERE Name='" + username + "' AND password='" + pass + "'";
+                SqlCommand cmd = new SqlCommand(qry, con);
+                SqlDataReader sdr = cmd.ExecuteReader();
+                if (sdr.HasRows == true)
+                {
+                    Response.Write("Sign in successful");
+                    Response.Redirect("signups.aspx");
+
+                }
+                else
+                {
+                    Response.Write("Details incorrect, Please try again");
+                }
+
             }
-            else
+            catch (Exception ex)
             {
-                Response.Write("Details incorrect, Please try again");
+                Response.Write(ex.Message);
             }
-            con.Close();
+            finally
+            {
+                con.Close();
+            }
+
         }
     }
+    
 }
