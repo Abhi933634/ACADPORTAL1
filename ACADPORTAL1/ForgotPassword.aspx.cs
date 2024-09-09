@@ -58,7 +58,7 @@ namespace ACADPORTAL1
                 smtp.EnableSsl = true;
                 smtp.UseDefaultCredentials = false;
                 smtp.Host = "smtp.gmail.com";
-                smtp.Credentials = new NetworkCredential("abhishek9336340817@gmail.com","login_otp");////
+                smtp.Credentials = new NetworkCredential("abhishek9336340817@gmail.com", "inrltiozovxkyqln");////
                 smtp.Send(mail);
 
                 lblErrorMsg.Text = "Login Otp sent succesfully.";

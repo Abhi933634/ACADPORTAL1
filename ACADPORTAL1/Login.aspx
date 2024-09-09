@@ -15,49 +15,50 @@
     <title></title>
     <link  rel="stylesheet" href="Login.css"/>
     <style type="text/css">
+        body{
+            background-color: #d6d6f5;
+        }
         .auto-style12 {
             width: 367px;
             height: 600px;
+            
         }
-        .auto-style13 {
-            width: 445px;
-            height: 447px;
-            margin-left: 18px;
-            background-color : aqua;
-            margin-top: 0px;
-        }
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-                <h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ACADPORTAL: CLASSIC TO SMART DEPARTMENT</h1>
+                <h1>ACADPORTAL: CLASSIC TO SMART DEPARTMENT</h1>
 
-            </p>
+            
             </div>
             <table>
-                <tr><td class="auto-style8"><div class="auto-style12">
-                    
-                    <asp:Image ID="Image1" runat="server" Height="479px" ImageUrl="~/photus/AP.png" Width="346px" />
-                    
-                    </div></td>
-                    <td class="auto-style9"><div class="auto-style13">
-                        <asp:TextBox ID="TextBox1" runat="server" BackColor="#FED8ED" BorderColor="#FFCCFF" CssClass="auto-style5" Height="36px" OnTextChanged="TextBox1_TextChanged1" Width="231px" placeholder="USERNAME"></asp:TextBox>
-                        <br />
-                        <br />
-                        <asp:TextBox ID="TextBox2" runat="server" BackColor="#FED8ED" CssClass="auto-style6" Height="36px" OnTextChanged="TextBox2_TextChanged1" placeholder="PASSWORD" Width="233px"></asp:TextBox> <br />
-                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ForgotPassword.aspx">Forgot Password?</a>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <br />
-                        <asp:Button ID="Button2" runat="server" Height="52px" OnClick="loginbtn_Click" Text="Login" Width="441px" />
-                        <br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+                <tr>
+                    <td class="auto-style8" width="33.33%">
+                    <div class="auto-style12">
+                        <asp:Image ID="Image1" runat="server" Height="479px" ImageUrl="~/photus/AP.png" Width="346px" />
+                    </div>
 
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<a href="Signups.aspx" > New User? Create your account</a>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
-                    <td class="auto-style7">
+                    </td>
+                    <td class="auto-style9" width="33.33%">
+                        <div class="auto-style2">
+                        <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style5" Height="36px" OnTextChanged="TextBox1_TextChanged1" Width="231px" placeholder="USERNAME"></asp:TextBox>
+                        <br />
+                        <br />
+                        <asp:TextBox ID="TextBox2" runat="server" CssClass="auto-style6" Height="36px" OnTextChanged="TextBox2_TextChanged1" placeholder="PASSWORD" Width="233px"></asp:TextBox> <br />
+                        <a href="ForgotPassword.aspx">Forgot Password?</a>
+                       
+                        <br />
+                     
+                        <asp:Button ID="Button2" runat="server" Height="52px" OnClick="loginbtn_Click" Text="Login" Width="286px" />
+                        <br />
+                    <br />
+                      <a href="Signups.aspx" > New User? Create your account</a>
+                      <br />
+                    </div>
+
+                    </td>
+                    <td class="auto-style7" width="33.33%">
                         <div class="auto-style10">
                             <h3> About Us !</h3>
                             <p>

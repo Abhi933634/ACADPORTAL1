@@ -34,6 +34,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseWinFormsOutOfProcDesigner>True</UseWinFormsOutOfProcDesigner>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +44,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseWinFormsOutOfProcDesigner>True</UseWinFormsOutOfProcDesigner>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
@@ -83,6 +85,7 @@
     <Content Include="photus\R.jpeg" />
     <Content Include="Signups.aspx" />
     <Content Include="Signups.css" />
+    <Content Include="Student-Home.aspx" />
     <Content Include="TEST.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -129,6 +132,13 @@
     </Compile>
     <Compile Include="Signups.aspx.designer.cs">
       <DependentUpon>Signups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student-Home.aspx.cs">
+      <DependentUpon>Student-Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student-Home.aspx.designer.cs">
+      <DependentUpon>Student-Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="TEST.aspx.cs">
       <DependentUpon>TEST.aspx</DependentUpon>

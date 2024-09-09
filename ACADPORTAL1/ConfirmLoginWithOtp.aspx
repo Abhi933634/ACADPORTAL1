@@ -12,11 +12,12 @@
             <h1>
                 Confirm login otp
             </h1>
-            <asp:Label ID="Label1" runat="server" Text="Email:"></asp:Label>
-            <asp:TextBox ID="Te" runat="server"></asp:TextBox>
+            <asp:Label ID="lblErrorMsg" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="Email" runat="server" Text="Email:"></asp:Label>
+            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
             <br />
-            <asp:Label ID="Label2" runat="server" Text=" Enter Otp:"></asp:Label>
-            <asp:TextBox ID="login_otp" runat="server"></asp:TextBox>
+            <asp:Label ID="Label2" runat="server"  Text=" Enter Otp:"></asp:Label>
+            <asp:TextBox ID="login_otp" runat="server" placeholder="enter otp"></asp:TextBox>
             <asp:Button ID="loginOtpBtn" runat="server" OnClick="Button1_Click" Text="Button" />
 
         </div>

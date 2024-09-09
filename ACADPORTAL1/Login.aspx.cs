@@ -61,7 +61,7 @@ namespace ACADPORTAL1
                 if (sdr.HasRows == true)
                 {
                     Response.Write("Sign in successful");
-                    Response.Redirect("signups.aspx");
+                    Response.Redirect("Home1teacher.aspx");
 
                 }
                 else

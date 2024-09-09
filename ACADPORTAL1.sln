@@ -5,11 +5,6 @@ VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACADPORTAL", "ACADPORTAL1\ACADPORTAL.csproj", "{8966E48C-45E1-46BA-89D2-654D6B83A073}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3203D7BD-0156-4254-BE31-551E33DA8D1B}"
-	ProjectSection(SolutionItems) = preProject
-		Home-teacher.css = Home-teacher.css
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
