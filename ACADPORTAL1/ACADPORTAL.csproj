@@ -81,6 +81,9 @@
     <Content Include="Login.aspx" />
     <Content Include="Login.css" />
     <Content Include="LoginWithOtp.aspx" />
+    <Content Include="photus\1.jpg" />
+    <Content Include="photus\2.jpg" />
+    <Content Include="photus\3.jpg" />
     <Content Include="photus\AP.png" />
     <Content Include="photus\R.jpeg" />
     <Content Include="Signups.aspx" />

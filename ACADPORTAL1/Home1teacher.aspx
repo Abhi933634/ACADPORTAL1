@@ -8,70 +8,17 @@
     <link rel="stylesheet" href="Home1teacher.css"/>
     <script src="Home1teacher.js"></script>
     <style type="text/css">
-        .auto-style3 {
+      
+        .auto-style8 {
+            left: 0px;
+            top: 0px;
             width: 1421px;
-            height: 89px;
-            margin-top: 0px;
-            background-color : #c3cb7e;
-            margin-left: 0px;
         }
-        .auto-style5 {
-            width: 72px;
-        }
-        .auto-style6 {
-            width: 1412px;
-            height: 84px;
-        }
-        .example1 {
- height: 50px;	
- overflow: hidden;
- position: relative;
- background-color: #c3cb7e;
-
-}
-.example1 h3 {
- font-size: 3em;
- color: #ff0000;
- position: absolute;
- width: 100%;
- height: 100%;
- margin: 0;
- line-height: 50px;
- text-align: center;
- /* Starting position */
- -moz-transform:translateX(100%);
- -webkit-transform:translateX(100%);	
- transform:translateX(100%);
- /* Apply animation to this element */	
- -moz-animation: example1 15s linear infinite;
- -webkit-animation: example1 15s linear infinite;
- animation: example1 15s linear infinite;
-}
-/* Move it (define the animation) */
-@-moz-keyframes example1 {
- 0%   { -moz-transform: translateX(100%); }
- 100% { -moz-transform: translateX(-100%); }
-}
-@-webkit-keyframes example1 {
- 0%   { -webkit-transform: translateX(100%); }
- 100% { -webkit-transform: translateX(-100%); }
-}
-@keyframes example1 {
- 0%   { 
- -moz-transform: translateX(100%); /* Firefox bug fix */
- -webkit-transform: translateX(100%); /* Firefox bug fix */
- transform: translateX(100%); 		
- }
- 100% { 
- -moz-transform: translateX(-100%); /* Firefox bug fix */
- -webkit-transform: translateX(-100%); /* Firefox bug fix */
- transform: translateX(-100%); 
- }
-}
-
+      
     </style>
 </head>
 <body>
+    
     <form id="form1" runat="server">
         <div id="mySidenav" class="sidenav">
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -94,34 +41,41 @@
                 <a href="#about">Time Table</a>
                 <a href="#about" class="auto-style5">Library</a>
             </div>
-
-            <div style="padding-left: 16px" class="auto-style6">
-            </div>
         </div>
         <div class="example1">
             <h3>WELCOME TO ECC</h3>
         </div>
-        <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="photus/AP.png" style="width:100%"/>
-        </div>
-        <div class="mySlides fade">
-            <img src="photus/R.jpeg" style="width:100%"/>
-        </div>
-        <div class="mySlides fade">
-            <img src="photus/AP.png" style="width:100%" />
-        </div>
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br>
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
+  
     </form>
+    <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="photus/1.jpg" style="width:100%"/>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="photus/2.jpg" style="width:100%"/>
+
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="photus/3.jpg" style="width:100%"/>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br/>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+    <div>dgddfjdfhkjddfshjddjdjdjdsjdjkdsfjkddsvds</div>
 </body>
 </html>
