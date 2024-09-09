@@ -57,7 +57,7 @@ namespace ACADPORTAL1
             {
                 con = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=AcadPortal;Integrated Security=True;Encrypt=False");
 
-                String query = "insert into Signup values(@Name,@FatherName, @MotherName, @DateOfBirth ,@Gender, @Department,  @MobileNo, @Email, @Address, @State, @City, @Pincode, @Password, @ConfirmPassword)";
+                String query = "insert into Signup(Name, Father'sName, Mother'sName, Date of birth,Gender,Department,MobileNo,Email,PermanenetAddress,State,City,Pincode,Password,ConfirmPassword) values(@Name,@FatherName, @MotherName, @DateOfBirth ,@Gender, @Department,  @MobileNo, @Email, @Address, @State, @City, @Pincode, @Password, @ConfirmPassword)";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@Name", Name);
                 cmd.Parameters.AddWithValue("@FatherName", Fname);
