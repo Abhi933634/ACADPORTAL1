@@ -75,6 +75,9 @@
   <ItemGroup>
     <Content Include="ConfirmLoginWithOtp.aspx" />
     <Content Include="ForgotPassword.aspx" />
+    <Content Include="Home1teacher.aspx" />
+    <Content Include="Home1teacher.css" />
+    <Content Include="Home1teacher.js" />
     <Content Include="Login.aspx" />
     <Content Include="Login.css" />
     <Content Include="LoginWithOtp.aspx" />
@@ -100,6 +103,13 @@
     </Compile>
     <Compile Include="ForgotPassword.aspx.designer.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home1teacher.aspx.cs">
+      <DependentUpon>Home1teacher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home1teacher.aspx.designer.cs">
+      <DependentUpon>Home1teacher.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
