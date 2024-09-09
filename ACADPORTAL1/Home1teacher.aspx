@@ -15,10 +15,6 @@
             background-color : #c3cb7e;
             margin-left: 0px;
         }
-        .auto-style4 {
-            width: 71px;
-            margin-left: 643px;
-        }
         .auto-style5 {
             width: 72px;
         }
@@ -97,10 +93,6 @@
                 <a href="#about">Notification</a>
                 <a href="#about">Time Table</a>
                 <a href="#about" class="auto-style5">Library</a>
-                <a href="#about" class="auto-style4">Logout</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                </a>
             </div>
 
             <div style="padding-left: 16px" class="auto-style6">
