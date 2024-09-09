@@ -10,14 +10,10 @@
     <style type="text/css">
         .auto-style3 {
             width: 1421px;
-            height: 89px;
+            height: 138px;
             margin-top: 0px;
             background-color : #c3cb7e;
             margin-left: 0px;
-        }
-        .auto-style4 {
-            width: 71px;
-            margin-left: 643px;
         }
         .auto-style5 {
             width: 72px;
@@ -73,6 +69,12 @@
  }
 }
 
+        .auto-style7 {
+            left: 0px;
+            top: 3px;
+            width: 80%;
+        }
+
     </style>
 </head>
 <body>
@@ -97,7 +99,9 @@
                 <a href="#about">Notification</a>
                 <a href="#about">Time Table</a>
                 <a href="#about" class="auto-style5">Library</a>
-                <a href="#about" class="auto-style4">Logout</a>
+                <a href="#about" class="auto-style5">Logout</a>
+                
+
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
                 </a>
@@ -107,9 +111,9 @@
             </div>
         </div>
         <div class="example1">
-            <h3>WELCOME TO ECC</h3>
+            <h3 class="auto-style7">WELCOME TO ECC</h3>
         </div>
-        <div class="slideshow-container">
+      <!--  <div class="slideshow-container">
         <div class="mySlides fade">
             <img src="photus/AP.png" style="width:100%"/>
         </div>
@@ -120,16 +124,13 @@
             <img src="photus/AP.png" style="width:100%" />
         </div>
         <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+         
+     <!--   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
     <br>
     <!-- The dots/circles -->
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
+         
     </form>
 </body>
 </html>

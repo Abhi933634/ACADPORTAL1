@@ -29,10 +29,10 @@ namespace ACADPORTAL1
             SqlDataReader read = selCmd.ExecuteReader();
             if (read.Read())
             {
-                Session["Name"] = read.GetValue(0).ToString();
-                Session["Email"] = read.GetValue(1).ToString();
+                /*Session["Name"] = read.GetValue(0).ToString();
+                Session["Email"] = read.GetValue(1).ToString();*/
                 con.Close();
-                Response.Redirect("Login.aspx");
+                Response.Redirect("Home1teacher.aspx");
 
             }
             else
