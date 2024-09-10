@@ -91,6 +91,7 @@
     <Content Include="Student-Home.aspx" />
     <Content Include="TEST.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfirmLoginWithOtp.aspx.cs">
@@ -149,6 +150,13 @@
     </Compile>
     <Compile Include="TEST.aspx.designer.cs">
       <DependentUpon>TEST.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -17,7 +17,7 @@ function myFunction() {
 }
 let slideIndex = 1;
 showSlides(slideIndex);
-
+ n
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }

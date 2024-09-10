@@ -7,16 +7,7 @@
     <title></title>
     <link rel="stylesheet" href="Home1teacher.css"/>
     <script src="Home1teacher.js"></script>
-    <style type="text/css">
-      
-        .auto-style8 {
-            left: 0px;
-            top: 0px;
-            width: 1421px;
-        }
-      
-    </style>
-</head>
+    </head>
 <body>
     
     <form id="form1" runat="server">
@@ -46,7 +37,6 @@
             <h3>WELCOME TO ECC</h3>
         </div>
   
-    </form>
     <div class="slideshow-container">
 
 <div class="mySlides fade">
@@ -76,6 +66,10 @@
   <span class="dot" onclick="currentSlide(2)"></span> 
   <span class="dot" onclick="currentSlide(3)"></span> 
 </div>
-    <div>dgddfjdfhkjddfshjddjdjdjdsjdjkdsfjkddsvds</div>
-</body>
+    <div></div>
+        <asp:Panel ID="Panel1" runat="server" Height="403px"><h1 style="">News/Notices</h1>
+        </asp:Panel>
+  
+    </form>
+    </body>
 </html>
