@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Net;
 
 namespace ACADPORTAL1
 {
@@ -23,7 +24,7 @@ namespace ACADPORTAL1
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string Name, Fname, Mname, Gender, Dept, Eml, Add, State, City, Pincode, Pass, ConfPass;
+            string Name, Fname, Mname, Gender, Dept, Eml, Add, State, City, Pincode, Pass, ConfPass, login_otp=null;
             long MobileNo;
             Name = TextBox1.Text;
             Fname = TextBox2.Text;
@@ -56,8 +57,7 @@ namespace ACADPORTAL1
             try
             {
                 con = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=AcadPortal;Integrated Security=True;Encrypt=False");
-
-                String query = "insert into Signup(Name, Father'sName, Mother'sName, Date of birth,Gender,Department,MobileNo,Email,PermanenetAddress,State,City,Pincode,Password,ConfirmPassword) values(@Name,@FatherName, @MotherName, @DateOfBirth ,@Gender, @Department,  @MobileNo, @Email, @Address, @State, @City, @Pincode, @Password, @ConfirmPassword)";
+                String query = "insert into Signup(Name, Father'sName, Mother'sName, Date of birth,Gender,Department,MobileNo,Email,PermanenetAddress,State,City,Pincode,Password,ConfirmPassword) values(@Name,@FatherName, @MotherName, @DateOfBirth ,@Gender, @Department,  @MobileNo, @Email, @Address, @State, @City, @Pincode, @Password, @ConfirmPassword,@login_otp)";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@Name", Name);
                 cmd.Parameters.AddWithValue("@FatherName", Fname);
@@ -74,6 +74,7 @@ namespace ACADPORTAL1
                 cmd.Parameters.AddWithValue("@Pincode", Pincode);
                 cmd.Parameters.AddWithValue("@Password", Pass);
                 cmd.Parameters.AddWithValue("@ConfirmPassword", ConfPass);
+                cmd.Parameters.AddWithValue("loginotp", login_otp);
                 con.Open();
                 int r = cmd.ExecuteNonQuery();
                 if (r > 0)

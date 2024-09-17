@@ -85,6 +85,7 @@
     <Content Include="photus\2.jpg" />
     <Content Include="photus\3.jpg" />
     <Content Include="photus\AP.png" />
+    <Content Include="photus\college.jpg" />
     <Content Include="photus\R.jpeg" />
     <Content Include="Signups.aspx" />
     <Content Include="Signups.css" />
@@ -92,6 +93,7 @@
     <Content Include="TEST.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm2.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfirmLoginWithOtp.aspx.cs">
@@ -114,6 +116,13 @@
     </Compile>
     <Compile Include="Home1teacher.aspx.designer.cs">
       <DependentUpon>Home1teacher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.Master.cs">
+      <DependentUpon>Index.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.Master.designer.cs">
+      <DependentUpon>Index.Master</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -158,8 +167,16 @@
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Index.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -53,9 +53,9 @@ namespace ACADPORTAL1
             try
             {
                 string username = TextBox1.Text;
-                string pass = TextBox2.Text;
+               // string pass = Password.Text;
                 con.Open();
-                string qry = "SELECT * FROM Signup WHERE Name='" + username + "' AND password='" + pass + "'";
+                string qry = "a"; //= "SELECT * FROM Signup WHERE Name='" + username + "' AND password='" + pass + "'";
                 SqlCommand cmd = new SqlCommand(qry, con);
                 SqlDataReader sdr = cmd.ExecuteReader();
                 if (sdr.HasRows == true)

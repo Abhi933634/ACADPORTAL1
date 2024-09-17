@@ -7,10 +7,23 @@
     <title></title>
     <link rel="stylesheet" href="Home1teacher.css"/>
     <script src="Home1teacher.js"></script>
+    <style>
+        Panel1{
+            background-color:black;
+        }
+        .auto-style8 {
+            width: 100%;
+            background-color:#333;
+            font-display:auto;
+        }
+        .auto-style9 {
+            height: 441px;
+        }
+    </style>
     </head>
 <body>
     
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" class="auto-style9">
         <div id="mySidenav" class="sidenav">
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
               <a href="#">Home</a>
@@ -36,38 +49,14 @@
         <div class="example1">
             <h3>WELCOME TO ECC</h3>
         </div>
-  
-    <div class="slideshow-container">
-
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="photus/1.jpg" style="width:100%"/>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="photus/2.jpg" style="width:100%"/>
-
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="photus/3.jpg" style="width:100%"/>
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
-
-</div>
-<br/>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
-    <div></div>
-        <asp:Panel ID="Panel1" runat="server" Height="403px"><h1 style="">News/Notices</h1>
+        <asp:Panel class="Panel1" runat="server" Height="403px"><h1 style="text-align:center">News/Notices</h1>
+            <div id="notice" style="text-align:center;color:white;  " class="auto-style8" >
+                <h6 >&#183; Notification for All Students of the College regarding Late Fine on Fee Defaulters after 12.09.2024</h6>
+                <h6> &#183; Important Notice for Students of B.A., B. Sc., B. Com. & BCA Semester-III Ex and Semester-V Regular of Session 2024-25 regarding Fee Submission</h6>
+                <h6> &#183; Second Chance to appear in Personal Interview to take admission in PG Courses</h6>
+                <h6> &#183; NOTICE FOR RESULT DECLARATION OF SECOND EXAMINATION OF B.A., B.Sc., B.Com. & B.C.A. Semester- III & IV (SESSION 2023-24)  (SCRUTINY)</h6>
+                <h6> &#183; Scrutiny Result of B.A., B. Sc., BCA and B. Ed. Semester-II (Session 2022-23)</h6>
+            </div>
         </asp:Panel>
   
     </form>

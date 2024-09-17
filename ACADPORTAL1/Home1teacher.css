@@ -1,5 +1,6 @@
 ﻿body {
     font-family: "Lato", sans-serif;
+    background-color:wheat;
 }
 
 .sidenav {
@@ -64,14 +65,14 @@ body {
 
 .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: #001524;
     width: 100%;
 }
 
     .topnav a {
         float: left;
         display: block;
-        color: #f2f2f2;
+        color: #FFECD1;
         text-align: center;
         padding: 14px 20px;
         text-decoration: none;
@@ -84,7 +85,7 @@ body {
         }
 
         .topnav a.active {
-            background-color: #04AA6D;
+            background-color: #15616D;
             color: white;
         }
 
@@ -301,4 +302,5 @@ img {
         font-size: 11px
     }
 }
+.p
 
