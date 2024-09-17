@@ -51,3 +51,74 @@
 .auto-style11 {
     margin-left: 0px;
 }
+body {
+    background-color: #d6d6f5;
+    background-image: url('photus/college.jpg');
+    background-size: 100%;
+    width: 100%;
+    font-family: cursive;
+}
+
+.auto-style13 {
+    width: 98%;
+    height: 447px;
+    margin-left: 0px;
+    background-color: transparent;
+    border-block-color: black;
+    margin-top: 0px;
+    box-shadow: 0 4px 200px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+}
+
+.auto-style14 {
+    width: 102%;
+    height: 31px;
+    text-align: center;
+}
+
+.auto-style16 {
+    margin-left: 63px;
+    margin-top: 13px;
+}
+
+.auto-style17 {
+    width: 306px;
+    text-align: left;
+    margin-left: 50px;
+    height: 1px;
+}
+
+.auto-style18 {
+    height: 5px;
+}
+
+.auto-style21 {
+    width: 349px;
+    height: 36px;
+    margin-left: 72px;
+    margin-top: 13px;
+}
+
+.auto-style22 {
+    margin-left: 96px;
+    font-size: 25px;
+    font-family: cursive;
+}
+
+.auto-style24 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.auto-style25 {
+    width: 616px;
+    height: 483px;
+}
+
+.auto-style26 {
+    text-align: center;
+}
+
+.auto-style27 {
+    margin-left: 25%;
+}

@@ -4,22 +4,47 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Signup</title>
+                 <style type="text/css">
+                     .auto-style15 {
+                         width: 537px;
+                         margin-left:25%;
+                     }
+                     .auto-style17 {
+                         width: 544px;
+                        height: 483px;
+                     }
+                     .auto-style18 {
+                         height: 617px;
+                         width: 721px;
+                     }
+                     .auto-style19 {
+                         height: 691px;
+                         width: 533px;
+                         margin-left: 381px;
+                     }
+                     .auto-style20 {
+                         width: 65%;
+                         height: 447px;
+                         margin-left: 0px;
+                         background-color: transparent;
+                         border-block-color: black;
+                         margin-top: 0px;
+                         box-shadow: 0 4px 200px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+                         border-radius: 25px;
+                     }
+                 </style>
                  <h1 class="auto-style13">ACADPORTAL: CLASSIC TO SMART DEPARTMENT</h1>
                 <link href="Signups.css" rel="stylesheet"/>
 </head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <table class="auto-style3">
+<body style="width: 94%; height: 804px;">
+    <form id="form1" runat="server" class="auto-style19">
+        
+            <table class="auto-style17">
                 <tr>
-                    
-                    <td class="auto-style1">
-                        <asp:Image ID="Image1" runat="server" Height="580px" ImageUrl="~/photus/AP.png" Width="444px" />
-                    </td>
-                    <td class="auto-style14">
-                        <div class="auto-style5">
-                            <table class="auto-style8">
+                    <td class="auto-style15">
+                        <div class="auto-style18">
+                            <table class="auto-style20">
                                 <tr>
                                     <td class="auto-style9">Name :</td>
                                     <td class="auto-style10">
@@ -127,33 +152,18 @@
                                     <td>
                                         <asp:TextBox ID="TextBox10" runat="server"></asp:TextBox>
                                     </td>
-                                </tr>
-                               
-                              
+                                </tr>  
                                 <tr>
                                     <td class="auto-style6">&nbsp;</td>
                                     <td>
                                         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit" />
                                     </td>
                                 </tr>
-                               
-                              
                             </table>
-
                         </div>
                     </td>
-                    <td class="auto-style2">
-                            <h3> About Us !</h3>
-                            <p>
-                                Welcome to the ACADPORTAL: Classic to Smart Department, where tradition meets innovation in the realm of academic management and technology integration. As educational institutions evolve to meet the needs of a digital age, 
-                                our department is dedicated to facilitating a seamless transition from classic systems to modern,
-                                smart solutions that enhance teaching, learning, and administrative efficiency.
-
-                            </p>
-                        </td>
                 </tr>
             </table>
-        </div>
     </form>
   </body>
 </html>

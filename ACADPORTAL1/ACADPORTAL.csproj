@@ -80,6 +80,7 @@
     <Content Include="Home1teacher.js" />
     <Content Include="Login.aspx" />
     <Content Include="Login.css" />
+    <Content Include="Login.js" />
     <Content Include="LoginWithOtp.aspx" />
     <Content Include="photus\1.jpg" />
     <Content Include="photus\2.jpg" />

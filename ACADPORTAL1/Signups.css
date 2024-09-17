@@ -1,4 +1,11 @@
-﻿.auto-style1 {
+﻿body {
+    background-color: #d6d6f5;
+    background-image: url('photus/college.jpg');
+    background-size: 100%;
+    width: 100%;
+    font-family: cursive;
+}
+.auto-style1 {
     width: 340px;
 }
 
@@ -21,9 +28,14 @@
 }
 
 .auto-style8 {
-    width: 535px;
-    height: 66px;
-    margin-bottom: 0px;
+    width: 98%;
+    height: 447px;
+    margin-left: 0px;
+    background-color: transparent;
+    border-block-color: black;
+    margin-top: 0px;
+    box-shadow: 0 4px 200px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
 }
 
 .auto-style9 {
