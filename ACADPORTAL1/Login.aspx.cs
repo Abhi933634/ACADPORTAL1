@@ -16,6 +16,7 @@ namespace ACADPORTAL1
 {
     public partial class Login_signup : System.Web.UI.Page
     {
+        public object Password { get; private set; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -53,9 +54,9 @@ namespace ACADPORTAL1
             try
             {
                 string username = TextBox1.Text;
-               // string pass = Password.Text;
+                string pass =Convert.ToString(Password);
                 con.Open();
-                string qry = "a"; //= "SELECT * FROM Signup WHERE Name='" + username + "' AND password='" + pass + "'";
+                string qry = "SELECT * FROM Signup WHERE Name='" + username + "' AND password='" + pass + "'";
                 SqlCommand cmd = new SqlCommand(qry, con);
                 SqlDataReader sdr = cmd.ExecuteReader();
                 if (sdr.HasRows == true)

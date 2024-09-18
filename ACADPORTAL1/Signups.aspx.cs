@@ -24,8 +24,9 @@ namespace ACADPORTAL1
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string Name, Fname, Mname, Gender, Dept, Eml, Add, State, City, Pincode, Pass, ConfPass, login_otp=null;
+            string Name, Fname, Mname, Gender, Dept, Eml, Add, State, City, Pincode, Pass;
             long MobileNo;
+            int id;
             Name = TextBox1.Text;
             Fname = TextBox2.Text;
             Mname = TextBox3.Text;
@@ -53,15 +54,19 @@ namespace ACADPORTAL1
             City = TextBox7.Text;
             Pincode = TextBox8.Text;
             Pass = TextBox9.Text;
-            ConfPass = TextBox10.Text;
+
+            
             try
             {
-                con = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=AcadPortal;Integrated Security=True;Encrypt=False");
-                String query = "insert into Signup(Name, Father'sName, Mother'sName, Date of birth,Gender,Department,MobileNo,Email,PermanenetAddress,State,City,Pincode,Password,ConfirmPassword) values(@Name,@FatherName, @MotherName, @DateOfBirth ,@Gender, @Department,  @MobileNo, @Email, @Address, @State, @City, @Pincode, @Password, @ConfirmPassword,@login_otp)";
+                con = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=AcadPortal;Integrated Security=True");
+                String query = "insert into Register (Name,FatherName ,MotherName ,Dob ,Gender, Department,MobileNo ,Email ,PrmAddress ,State,City ,Pincode ,Password) " +
+                    "values(@Name,@FatherName,@MotherName,@DateOfBirth,@Gender,@Department,@MobileNo,@Email,@Address,@State,@City,@Pincode,@Password);";
+               
+                
                 SqlCommand cmd = new SqlCommand(query, con);
+               
                 cmd.Parameters.AddWithValue("@Name", Name);
                 cmd.Parameters.AddWithValue("@FatherName", Fname);
-
                 cmd.Parameters.AddWithValue("@MotherName", Mname);
                 cmd.Parameters.AddWithValue("@DateOfBirth", DOB);
                 cmd.Parameters.AddWithValue("@Gender", Gender);
@@ -73,17 +78,15 @@ namespace ACADPORTAL1
                 cmd.Parameters.AddWithValue("@City", City);
                 cmd.Parameters.AddWithValue("@Pincode", Pincode);
                 cmd.Parameters.AddWithValue("@Password", Pass);
-                cmd.Parameters.AddWithValue("@ConfirmPassword", ConfPass);
-                cmd.Parameters.AddWithValue("loginotp", login_otp);
                 con.Open();
                 int r = cmd.ExecuteNonQuery();
                 if (r > 0)
                 {
-                    Response.Write("one row inserted");
+                    Response.Write("one record inserted");
                 }
                 else
                 {
-                    Response.Write("Fail");
+                    Response.Write("Fail to insert ");
                 }
             }
             catch (Exception ex)

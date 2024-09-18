@@ -37,7 +37,7 @@ namespace ACADPORTAL1
                 int myRandom = random.Next(10000000, 99999999);
                 string login_otp =myRandom.ToString();
                 con.Open();
-                string updateAcc = "update Signup set login_otp='" + login_otp + "' where email='"+email.Text.ToString()+"' ";
+                string updateAcc = "update FrgtPassword set login_otp='" + login_otp + "' where email='"+email.Text.ToString()+"' ";
                 SqlCommand cmdUpdate =new SqlCommand(updateAcc,con);
                 cmdUpdate.ExecuteNonQuery();
                 con.Close();

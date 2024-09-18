@@ -67,6 +67,7 @@ body {
     overflow: hidden;
     background-color: #001524;
     width: 100%;
+    border-radius= 10%;
 }
 
     .topnav a {
