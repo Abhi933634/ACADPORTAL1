@@ -12,7 +12,35 @@
             background-color:black;
         }
         .auto-style9 {
-            height: 441px;
+            height: 736px;
+        }
+        .auto-style10 {
+            font-size: 20px;
+        }
+        .auto-style11 {
+            height: 534px;
+            width:100%;
+        }
+        .auto-style12 {
+            float: left;
+            height: 35%;
+            width: 25%;
+        }
+        .auto-style13 {
+            float: left;
+            height: 34%;
+            width: 25%;
+        }
+        .auto-style14 {
+            float: left;
+            height: 35%;
+            width: 25%;
+        }
+        .auto-style15 {
+            float: left;
+            height: 30%;
+            width: 281px;
+            margin-left: 153px;
         }
     </style>
     </head>
@@ -31,7 +59,7 @@
         </div>
         <div id="main" class="auto-style3">
             <span style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776; </span> 
-            <span style="font-family: Georgia, serif; font-size: 50px; text-align: right">ACADPORTAL</span>
+            <span style="font-family: Georgia, serif; font-size: 50px; text-align: right">ACADPORTAL</span><span style="font-family: Georgia, serif; text-align: right" class="auto-style10">(admin)</span>
             <div class="topnav" id="myTopnav">
                 <a href="#home" class="active">Home</a>
                 <a href="#news">Attendence</a>
@@ -39,12 +67,15 @@
                 <a href="#about">Notification</a>
                 <a href="#about">Time Table</a>
                 <a href="#about" class="auto-style5">Library</a>
+                <br />
             </div>
         </div>
-        <div class="example1">
-            <h3>WELCOME TO ECC</h3>
-        </div>
-  
+  <div class="auto-style11">
+      <div class="auto-style12"></div>
+    <div class="auto-style13"></div>
+        <div class="auto-style14"></div>
+      <div class="auto-style14"></div>
+  </div>
     </form>
     </body>
 </html>

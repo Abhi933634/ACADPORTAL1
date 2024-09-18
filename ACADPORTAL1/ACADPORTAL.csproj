@@ -73,6 +73,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin.aspx" />
     <Content Include="ConfirmLoginWithOtp.aspx" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="Home1teacher.aspx" />
@@ -97,6 +98,13 @@
     <Content Include="WebForm2.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ConfirmLoginWithOtp.aspx.cs">
       <DependentUpon>ConfirmLoginWithOtp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
