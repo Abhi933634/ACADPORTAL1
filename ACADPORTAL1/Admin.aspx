@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="Home1teacher.css"/>
     <script src="Home1teacher.js"></script>
     <style>
-        Panel1{
-            background-color:black;
-        }
         .auto-style9 {
             height: 736px;
         }
