@@ -37,8 +37,8 @@ namespace ACADPORTAL1
             }
             else
             {
-                lblErrorMsg.Text = "login otp is not correct";
-                lblErrorMsg.ForeColor=System.Drawing.Color.Red;
+                //lblErrorMsg.Text = "login otp is not correct";
+                //lblErrorMsg.ForeColor=System.Drawing.Color.Red;
                 con.Close();
             }
         }

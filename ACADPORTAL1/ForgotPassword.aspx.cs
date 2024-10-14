@@ -61,14 +61,14 @@ namespace ACADPORTAL1
                 smtp.Credentials = new NetworkCredential("abhishek9336340817@gmail.com", "inrltiozovxkyqln");////
                 smtp.Send(mail);
 
-                lblErrorMsg.Text = "Login Otp sent succesfully.";
-                lblErrorMsg.ForeColor = System.Drawing.Color.Green;
+               // lblErrorMsg.Text = "Login Otp sent succesfully.";
+               // lblErrorMsg.ForeColor = System.Drawing.Color.Green;
 
             }
             else
             {
-                lblErrorMsg.Text = "your email is not associated with us.";
-                lblErrorMsg.ForeColor = System.Drawing.Color.Red;
+              //  lblErrorMsg.Text = "your email is not associated with us.";
+              //  lblErrorMsg.ForeColor = System.Drawing.Color.Red;
                 con.Close() ;
 
             }

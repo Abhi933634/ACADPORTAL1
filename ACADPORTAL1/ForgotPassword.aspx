@@ -10,7 +10,6 @@
     <form id="form1" runat="server">
         <div>
             <h1>Login With Otp.....</h1>
-            <asp:Label ID="lblErrorMsg" runat="server" Text=""></asp:Label>
             <asp:Label ID="Label1" runat="server" Text="Email:"></asp:Label>
             <asp:TextBox ID="email" runat="server" placeholder="Enter your email"></asp:TextBox>
             <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
