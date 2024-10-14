@@ -48,7 +48,7 @@
                        
                         <br />
                      
-                        &nbsp;<asp:Button ID="Button2" runat="server" Height="43px" OnClick="loginbtn_Click" Text="Login" Width="305px" CssClass="auto-style22" />
+                        &nbsp;<asp:Button ID="Button2" runat="server" Height="43px" OnClick="loginbtn_Click" Text="Login" Width="305px" CssClass="auto-style22" style="border-radius:25px" />
                     </div>
 
                     </td>

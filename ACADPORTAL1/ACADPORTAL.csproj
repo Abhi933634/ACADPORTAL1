@@ -87,15 +87,23 @@
     <Content Include="photus\2.jpg" />
     <Content Include="photus\3.jpg" />
     <Content Include="photus\AP.png" />
+    <Content Include="photus\attendence.jpeg" />
     <Content Include="photus\college.jpg" />
-    <Content Include="photus\R.jpeg" />
+    <Content Include="photus\confrenece-removebg-preview.png" />
+    <Content Include="photus\f-removebg-preview.png" />
+    <Content Include="photus\Faculty-Icon-removebg-preview.png" />
+    <Content Include="photus\library-removebg-preview.png" />
+    <Content Include="photus\marksheet-removebg-preview.png" />
+    <Content Include="photus\notes-removebg-preview.png" />
+    <Content Include="photus\notice-removebg-preview.png" />
+    <Content Include="photus\student-removebg-preview.png" />
+    <Content Include="photus\time,jpeg.png" />
     <Content Include="Signups.aspx" />
     <Content Include="Signups.css" />
     <Content Include="Student-Home.aspx" />
     <Content Include="TEST.aspx" />
+    <Content Include="TimeTable.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
-    <Content Include="WebForm2.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.aspx.cs">
@@ -125,13 +133,6 @@
     </Compile>
     <Compile Include="Home1teacher.aspx.designer.cs">
       <DependentUpon>Home1teacher.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Index.Master.cs">
-      <DependentUpon>Index.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Index.Master.designer.cs">
-      <DependentUpon>Index.Master</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -169,23 +170,15 @@
     <Compile Include="TEST.aspx.designer.cs">
       <DependentUpon>TEST.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="TimeTable.aspx.cs">
+      <DependentUpon>TimeTable.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
+    <Compile Include="TimeTable.aspx.designer.cs">
+      <DependentUpon>TimeTable.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Index.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

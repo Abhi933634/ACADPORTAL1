@@ -7,44 +7,52 @@
     <title></title>
     <link rel="stylesheet" href="Home1teacher.css"/>
     <script src="Home1teacher.js"></script>
-    <style>
-        Panel1{
-            background-color:black;
+    <style type="text/css">
+        .outerdiv {
+            float: right;
+            width: 75%;
+            height: 75%;
         }
-        .auto-style9 {
-            height: 736px;
+        .auto-style8 {
+            float: right;
+            width: 50%;
+            height: 556px;
+            background-color:;
+            margin-top:2%;
         }
-        .auto-style10 {
-            font-size: 20px;
+        .ib{
+            width:90%;
+            height:90%;
+            border-radius:35px;
+            border:3px solid black;
+           
         }
-        .auto-style11 {
-            height: 534px;
-            width:100%;
+        .ib:hover{
+            background-color:gold;
         }
-        .auto-style12 {
-            float: left;
-            height: 35%;
-            width: 25%;
+        .news{
+            height:200px;
+            background-color:bisque;
+            overflow:scroll;
+            
         }
-        .auto-style13 {
-            float: left;
-            height: 34%;
-            width: 25%;
+        .hv{
+            position:relative;
         }
-        .auto-style14 {
-            float: left;
-            height: 35%;
-            width: 25%;
+        .text{
+            position: absolute;
+            top: 58px;
+            left: 76px;
+            opacity:0;
         }
-        .auto-style15 {
-            float: left;
-            height: 30%;
-            width: 281px;
-            margin-left: 153px;
+        #ImageButton1:hover .hv{
+           opacity:1;
+           z-index:999;
+          
         }
     </style>
     </head>
-<body>
+<body >
     
     <form id="form1" runat="server" class="auto-style9">
         <div id="mySidenav" class="sidenav">
@@ -70,12 +78,50 @@
                 <br />
             </div>
         </div>
-  <div class="auto-style11">
-      <div class="auto-style12"></div>
-    <div class="auto-style13"></div>
-        <div class="auto-style14"></div>
-      <div class="auto-style14"></div>
-  </div>
-    </form>
+        <div style="float:left; width:50%; height:556px">
+            <h2>News/Notices</h2>
+            <asp:Panel ID="Panel1" runat="server">
+                <div class="news">
+                    <asp:Table ID="Table1" runat="server">
+                        <asp:TableRow>
+                            <asp:TableCell>a</asp:TableCell>
+                            <asp:TableCell>a</asp:TableCell>
+                        </asp:TableRow>
+                    </asp:Table>
+                </div>
+            </asp:Panel>
+        </div>
+
+    <div class="auto-style8">
+        <div style="width:33.33%; height:33.33%;float:left" class="hv">
+            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/photus/f-removebg-preview.png" CssClass="ib" OnClick="ImageButton1_Click1"/>
+            <div class="text">HHH</div>
+        </div>
+        <div style="width:33.33%; height:33.33%;float:left" class="hv">
+            <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/photus/student-removebg-preview.png" CssClass="ib"/>
+        </div>
+        <div style="width:33.33%; height:33.33%;float:left" class="hv">
+            <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/photus/attendence.jpeg" CssClass="ib" />
+        </div> 
+        <div style="width:33.33%; height:33.33%;float:left"class="hv">
+            <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/photus/time,jpeg.png" CssClass="ib" />
+        </div>
+        <div style="width:33.33%; height:33.33%;float:left"class="hv">
+            <asp:ImageButton ID="ImageButton5" runat="server" ImageUrl="~/photus/marksheet-removebg-preview.png" CssClass="ib" />
+        </div>
+        <div style="width:33.33%; height:33.33%;float:left"class="hv">
+            <asp:ImageButton ID="ImageButton6" runat="server" ImageUrl="~/photus/notes-removebg-preview.png" CssClass="ib" />
+        </div>
+        <div style="width:33.33%; height:33.33%;float:left" class="hv">
+            <asp:ImageButton ID="ImageButton7" runat="server" ImageUrl="~/photus/library-removebg-preview.png" CssClass="ib" />
+        </div>
+        <div style="width:33.33%; height:33.33%;float:left" class="hv">
+            <asp:ImageButton ID="ImageButton8" runat="server" ImageUrl="~/photus/confrenece-removebg-preview.png" CssClass="ib" />
+        </div>
+        <div style="width:33.33%; height:33.33%;float:left" class="hv">
+            <asp:ImageButton ID="ImageButton9" runat="server" ImageUrl="~/photus/notice-removebg-preview.png" CssClass="ib" />
+        </div>
+    </div>
+        </form>
     </body>
 </html>
