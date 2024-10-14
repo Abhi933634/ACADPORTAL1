@@ -24,7 +24,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-                <h1 class="auto-style26">&nbsp;&nbsp; <span class="auto-style28"><strong>ACADPORTAL: CLASSIC TO SMART DEPARTMENT</strong></span></h1>
+                <h1 class="auto-style26">&nbsp; &nbsp;&nbsp; <span class="auto-style28"><strong>ACADPORTAL: CLASSIC TO SMART DEPARTMENT</strong></span></h1>
             </div>
             <table class="auto-style27">
                 <tr>

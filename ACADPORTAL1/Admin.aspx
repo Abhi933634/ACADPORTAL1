@@ -15,7 +15,7 @@
         }
         .auto-style8 {
             float: right;
-            width: 50%;
+            width: 70%;
             height: 556px;
             background-color:;
             margin-top:2%;
@@ -29,6 +29,7 @@
         }
         .ib:hover{
             background-color:gold;
+            opacity:1;
         }
         .news{
             height:200px;
@@ -38,6 +39,9 @@
         }
         .hv{
             position:relative;
+            width:33.33%; 
+            height:33.33%;
+            float:left;
         }
         .text{
             position: absolute;
@@ -45,9 +49,9 @@
             left: 76px;
             opacity:0;
         }
-        #ImageButton1:hover .hv{
+        .hv:hover .text{
            opacity:1;
-           z-index:999;
+           background-color:black;
           
         }
     </style>
@@ -78,48 +82,55 @@
                 <br />
             </div>
         </div>
-        <div style="float:left; width:50%; height:556px">
-            <h2>News/Notices</h2>
-            <asp:Panel ID="Panel1" runat="server">
-                <div class="news">
-                    <asp:Table ID="Table1" runat="server">
-                        <asp:TableRow>
-                            <asp:TableCell>a</asp:TableCell>
-                            <asp:TableCell>a</asp:TableCell>
-                        </asp:TableRow>
-                    </asp:Table>
-                </div>
-            </asp:Panel>
-        </div>
 
     <div class="auto-style8">
-        <div style="width:33.33%; height:33.33%;float:left" class="hv">
-            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/photus/f-removebg-preview.png" CssClass="ib" OnClick="ImageButton1_Click1"/>
-            <div class="text">HHH</div>
+        <div  class="hv">
+            <asp:Image ID="Image1" ImageUrl="~/photus/f-removebg-preview.png" runat="server" CssClass="ib" />
+            <div class="text">
+                <asp:Button ID="Button1" runat="server" Text="Click" OnClick="Button1_Click" /></div>
         </div>
         <div style="width:33.33%; height:33.33%;float:left" class="hv">
-            <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/photus/student-removebg-preview.png" CssClass="ib"/>
-        </div>
+           
+            <asp:Image ID="Image2" runat="server" ImageUrl="~/photus/student-removebg-preview.png" CssClass="ib"/>
+                <div class="text">
+        <asp:Button ID="Button2" runat="server" Text="Click" /></div>
+                </div>
+       
         <div style="width:33.33%; height:33.33%;float:left" class="hv">
-            <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/photus/attendence.jpeg" CssClass="ib" />
+            <asp:Image ID="Image3" runat="server" ImageUrl="~/photus/attendence.jpeg" CssClass="ib" />
+                <div class="text">
+        <asp:Button ID="Button3" runat="server" Text="Click" /></div>
+                
         </div> 
         <div style="width:33.33%; height:33.33%;float:left"class="hv">
-            <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/photus/time,jpeg.png" CssClass="ib" />
+            <asp:Image ID="Image4" runat="server" ImageUrl="~/photus/time,jpeg.png" CssClass="ib"  />
+            <div class="text">
+    <asp:Button ID="Button4" runat="server" Text="Click" /></div>
         </div>
         <div style="width:33.33%; height:33.33%;float:left"class="hv">
-            <asp:ImageButton ID="ImageButton5" runat="server" ImageUrl="~/photus/marksheet-removebg-preview.png" CssClass="ib" />
+            <asp:Image ID="Image5" runat="server" ImageUrl="~/photus/marksheet-removebg-preview.png" CssClass="ib" />
+            <div class="text">
+    <asp:Button ID="Button5" runat="server" Text="Click" /></div>
         </div>
         <div style="width:33.33%; height:33.33%;float:left"class="hv">
-            <asp:ImageButton ID="ImageButton6" runat="server" ImageUrl="~/photus/notes-removebg-preview.png" CssClass="ib" />
+            <asp:Image ID="Image6" runat="server" ImageUrl="~/photus/notes-removebg-preview.png" CssClass="ib"/>
+            <div class="text">
+    <asp:Button ID="Button6" runat="server" Text="Click" /></div>
         </div>
         <div style="width:33.33%; height:33.33%;float:left" class="hv">
-            <asp:ImageButton ID="ImageButton7" runat="server" ImageUrl="~/photus/library-removebg-preview.png" CssClass="ib" />
+            <asp:Image ID="Image7" runat="server" ImageUrl="~/photus/library-removebg-preview.png" CssClass="ib" />
+            <div class="text">
+    <asp:Button ID="Button7" runat="server" Text="Click" /></div>
         </div>
         <div style="width:33.33%; height:33.33%;float:left" class="hv">
-            <asp:ImageButton ID="ImageButton8" runat="server" ImageUrl="~/photus/confrenece-removebg-preview.png" CssClass="ib" />
+            <asp:Image ID="Image8" runat="server" ImageUrl="~/photus/confrenece-removebg-preview.png" CssClass="ib" />
+            <div class="text">
+    <asp:Button ID="Button8" runat="server" Text="Click" /></div>
         </div>
         <div style="width:33.33%; height:33.33%;float:left" class="hv">
-            <asp:ImageButton ID="ImageButton9" runat="server" ImageUrl="~/photus/notice-removebg-preview.png" CssClass="ib" />
+            <asp:Image ID="Image9" runat="server" ImageUrl="~/photus/notice-removebg-preview.png" CssClass="ib"/>
+            <div class="text">
+    <asp:Button ID="Button9" runat="server" Text="Click" /></div>
         </div>
     </div>
         </form>

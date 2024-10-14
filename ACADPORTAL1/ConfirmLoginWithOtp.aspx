@@ -27,10 +27,6 @@
             height: 59px;
             width: 107px;
         }
-        .auto-style4 {
-            height: 68px;
-            width: 107px;
-        }
         body {
     background-color: #d6d6f5;
     background-image: url('photus/college.jpg');
@@ -38,12 +34,16 @@
     width: 100%;
     font-family: cursive;
 }
-        .auto-style5 {
-            height: 68px;
-            width: 258px;
-        }
         .auto-style6 {
             height: 59px;
+            width: 258px;
+        }
+        .auto-style7 {
+            height: 64px;
+            width: 107px;
+        }
+        .auto-style8 {
+            height: 64px;
             width: 258px;
         }
     </style>
@@ -55,10 +55,10 @@
                 Login with OTP</h1>
             <table id="tab" class="auto-style2" >
                 <tr>
-                    <td class="auto-style4">
+                    <td class="auto-style7">
             <asp:Label ID="Email" runat="server" Text="Email:"></asp:Label>
                      </td>
-                    <td class="auto-style5">
+                    <td class="auto-style8">
             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                         <asp:Button ID="loginOtpBtn" runat="server" OnClick="Button1_Click" Text="send OTP" />
                         </td>
