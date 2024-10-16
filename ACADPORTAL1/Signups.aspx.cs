@@ -7,30 +7,32 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Net;
+using Microsoft.Win32;
+using System.Web.Services.Description;
+using System.Windows.Forms;
 
 namespace ACADPORTAL1
 {
     public partial class Signups : System.Web.UI.Page
     {
-        SqlConnection con = null;
+        
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
-          
-
         }
-
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string Name, Fname, Mname, Gender, Dept, Eml, Add, State, City, Pincode, Pass;
-            long MobileNo;
-            int id;
-            Name = TextBox1.Text;
+          
+
+            string Name1, Fname, Mname, Gender, Dept, Eml, Add, State, City,  Pass;
+            string MobileNo;
+            
+            Name1 = TextBox1.Text;
             Fname = TextBox2.Text;
             Mname = TextBox3.Text;
-            string DOB =(DropDownList2.SelectedValue + DropDownList3.SelectedValue + DropDownList4.SelectedValue);
+            string DOB = (DropDownList2.Text + DropDownList3.Text + DropDownList4.Text);
            
             if (Male.Checked == true)
             {
@@ -47,25 +49,23 @@ namespace ACADPORTAL1
 
 
             Dept = DropDownList1.Text;
-            MobileNo = Convert.ToInt64(txtmobile.Text);
+            MobileNo = txtmobile.Text;
             Eml = TextBox4.Text;
             Add = TextBox5.Text;
             State = TextBox6.Text;
             City = TextBox7.Text;
-            Pincode = TextBox8.Text;
+            Int64 Pincode = int.Parse(TextBox8.Text);
             Pass = TextBox9.Text;
-
+          
             
             try
             {
-                con = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=AcadPortal;Integrated Security=True");
-                String query = "insert into Register (Name,FatherName ,MotherName ,Dob ,Gender, Department,MobileNo ,Email ,PrmAddress ,State,City ,Pincode ,Password) " +
-                    "values(@Name,@FatherName,@MotherName,@DateOfBirth,@Gender,@Department,@MobileNo,@Email,@Address,@State,@City,@Pincode,@Password);";
-               
-                
+                SqlConnection  con = new SqlConnection("Data Source=LAPTOP-2HMQEB1H\\SQLEXPRESS;Initial Catalog=AcadPortal;Integrated Security=True");
+               String query = "insert into Register values (@Name,@FatherName ,@MotherName ,@DateOfBirth ,@Gender, @Department,@MobileNo ,@Email ,@PermanenetAddress ,@State,@City ,@Pincode ,@Password) ";
+             
                 SqlCommand cmd = new SqlCommand(query, con);
-               
-                cmd.Parameters.AddWithValue("@Name", Name);
+                con.Open();
+                cmd.Parameters.AddWithValue("@Name", Name1);
                 cmd.Parameters.AddWithValue("@FatherName", Fname);
                 cmd.Parameters.AddWithValue("@MotherName", Mname);
                 cmd.Parameters.AddWithValue("@DateOfBirth", DOB);
@@ -73,12 +73,12 @@ namespace ACADPORTAL1
                 cmd.Parameters.AddWithValue("@Department", Dept);
                 cmd.Parameters.AddWithValue("@MobileNo", MobileNo);
                 cmd.Parameters.AddWithValue("@Email", Eml);
-                cmd.Parameters.AddWithValue("@Address", Add);
+                cmd.Parameters.AddWithValue("@PermanenetAddress", Add);
                 cmd.Parameters.AddWithValue("@State", State);
                 cmd.Parameters.AddWithValue("@City", City);
                 cmd.Parameters.AddWithValue("@Pincode", Pincode);
                 cmd.Parameters.AddWithValue("@Password", Pass);
-                con.Open();
+              
                 int r = cmd.ExecuteNonQuery();
                 if (r > 0)
                 {
@@ -88,21 +88,15 @@ namespace ACADPORTAL1
                 {
                     Response.Write("Fail to insert ");
                 }
+                con.Close();
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.Message);
             }
-            finally
-            {
-                con.Close();
-            }
-
-
-
+            
         }
-
-        protected void TextBox3_TextChanged(object sender, EventArgs e)
+         protected void TextBox3_TextChanged(object sender, EventArgs e)
         {
 
         }

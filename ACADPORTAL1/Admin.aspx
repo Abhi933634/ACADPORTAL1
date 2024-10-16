@@ -87,7 +87,9 @@
         <div  class="hv">
             <asp:Image ID="Image1" ImageUrl="~/photus/f-removebg-preview.png" runat="server" CssClass="ib" />
             <div class="text">
-                <asp:Button ID="Button1" runat="server" Text="Click" OnClick="Button1_Click" /></div>
+              
+
+            </div>
         </div>
         <div style="width:33.33%; height:33.33%;float:left" class="hv">
            

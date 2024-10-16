@@ -25,7 +25,7 @@
                      }
                      .auto-style20 {
                          width: 65%;
-                         height: 447px;
+                         height: 621px;
                          margin-left: 0px;
                          background-color: transparent;
                          border-block-color: black;

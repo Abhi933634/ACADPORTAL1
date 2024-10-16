@@ -11,6 +11,8 @@ using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Xml.Linq;
 using System.Reflection.Emit;
+using Microsoft.Win32;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace ACADPORTAL1
 {
@@ -53,12 +55,17 @@ namespace ACADPORTAL1
 
             try
             {
-                string username = TextBox1.Text;
-                string pass =Convert.ToString(Password);
+                string Email= TextBox1.Text;
+               // string Password = Pass.Text; 
                 con.Open();
-                string qry = "SELECT * FROM Signup WHERE Name='" + username + "' AND password='" + pass + "'";
+                string qry = "select * from Register where Email=@Email and Password=@Password";
                 SqlCommand cmd = new SqlCommand(qry, con);
                 SqlDataReader sdr = cmd.ExecuteReader();
+                cmd.Parameters.AddWithValue("@Email", Email);
+                cmd.Parameters.AddWithValue("Password", Password);
+
+
+
                 if (sdr.HasRows == true)
                 {
                     Response.Write("Sign in successful");

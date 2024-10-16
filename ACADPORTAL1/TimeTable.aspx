@@ -43,6 +43,7 @@ table th {
         <div>
             
 <div class="wrapper">
+    <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
   <table>
     <caption>Timetable</caption>
     <tr>

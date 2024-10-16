@@ -27,7 +27,7 @@ namespace ACADPORTAL1
             string cs = "Data Source=LAPTOP-2HMQEB1H\\SQLEXPRESS;Initial Catalog=AcadPortal;Integrated Security=True;Encrypt=False";
             SqlConnection con = new SqlConnection(cs);
             con.Open();
-            string selectuser = "select Name from Signup Where Email='" + email.Text.ToString() + "' ";
+            string selectuser = "select Name from Register Where Email='" + email.Text.ToString() + "' ";
             SqlCommand selcmd=new SqlCommand(selectuser, con);
             SqlDataReader read=selcmd.ExecuteReader();
             if (read.Read())
@@ -67,8 +67,8 @@ namespace ACADPORTAL1
             }
             else
             {
-              //  lblErrorMsg.Text = "your email is not associated with us.";
-              //  lblErrorMsg.ForeColor = System.Drawing.Color.Red;
+              // lblErrorMsg.Text = "your email is not associated with us.";
+               //lblErrorMsg.ForeColor = System.Drawing.Color.Red;
                 con.Close() ;
 
             }
