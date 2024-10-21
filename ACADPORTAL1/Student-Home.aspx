@@ -21,7 +21,7 @@
     <form id="form1" runat="server" class="auto-style9">
         <div id="mySidenav" class="sidenav">
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-              <a href="#">Home</a>
+              <a href="#">Dashboard</a>
               <a href="#">Attendence</a>
               <a href="#">Notes</a>
               <a href="#">Marks</a>
@@ -44,7 +44,7 @@
         <div class="example1">
             <h3>WELCOME TO ECC</h3>
         </div>
-  
+
     </form>
     </body>
 </html>

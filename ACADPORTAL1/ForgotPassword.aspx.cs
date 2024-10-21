@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Net;
 using System.Net.Mail;
+using System.Windows.Forms;
 
 
 
@@ -17,6 +18,7 @@ namespace ACADPORTAL1
 {
     public partial class ForgotPassword : System.Web.UI.Page
     {
+        public static int myRandom;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -34,7 +36,7 @@ namespace ACADPORTAL1
             {
                 con.Close();
                 Random random= new Random();
-                int myRandom = random.Next(10000000, 99999999);
+                myRandom=random.Next(10000000, 99999999);
                 string login_otp =myRandom.ToString();
                 con.Open();
                 string updateAcc = "update FrgtPassword set login_otp='" + login_otp + "' where email='"+email.Text.ToString()+"' ";
@@ -58,22 +60,33 @@ namespace ACADPORTAL1
                 smtp.EnableSsl = true;
                 smtp.UseDefaultCredentials = false;
                 smtp.Host = "smtp.gmail.com";
-                smtp.Credentials = new NetworkCredential("abhishek9336340817@gmail.com", "inrltiozovxkyqln");////
+                smtp.Credentials = new NetworkCredential("abhishek9336340817@gmail.com", "inrltiozovxkyqln");
                 smtp.Send(mail);
-
-               // lblErrorMsg.Text = "Login Otp sent succesfully.";
-               // lblErrorMsg.ForeColor = System.Drawing.Color.Green;
-
             }
             else
             {
-              // lblErrorMsg.Text = "your email is not associated with us.";
-               //lblErrorMsg.ForeColor = System.Drawing.Color.Red;
                 con.Close() ;
 
             }
+        }
 
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            int otp = Convert.ToInt32(login_otp.Text);
+            if (ForgotPassword.myRandom == otp)
+            {
+                // Response.Redirect("Home1teacher.aspx");
+                MessageBox.Show("hi y kas", "correct", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MessageBox.Show("hi y kas", "Incorrect", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

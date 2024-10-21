@@ -36,6 +36,9 @@ table td, table th {
 table th {
   font-weight: 400;
 }
+.drop{
+    border-radius:10px;
+}
     </style>
 </head>
 <body>
@@ -43,7 +46,17 @@ table th {
         <div>
             
 <div class="wrapper">
-    <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+    <asp:DropDownList ID="DropDownList1" runat="server">
+        <asp:ListItem>Semester</asp:ListItem>
+        <asp:ListItem>i</asp:ListItem>
+        <asp:ListItem>ii</asp:ListItem>
+        <asp:ListItem>iii</asp:ListItem>
+        <asp:ListItem>iv</asp:ListItem>
+        <asp:ListItem>v</asp:ListItem>
+        <asp:ListItem>vi</asp:ListItem>
+    </asp:DropDownList>
+  &nbsp;
+    <asp:Button ID="Button1" runat="server" Text="Show" CssClass="drop" />
   <table>
     <caption>Timetable</caption>
     <tr>

@@ -44,10 +44,6 @@ namespace ACADPORTAL1
         {
 
         }
-
-
-       
-
         protected void loginbtn_Click(object sender, EventArgs e)
         {
             string cs = "Data Source=LAPTOP-2HMQEB1H\\SQLEXPRESS;Initial Catalog=AcadPortal;Integrated Security=True;Encrypt=False";
@@ -56,25 +52,22 @@ namespace ACADPORTAL1
             try
             {
                 string Email= TextBox1.Text;
-               // string Password = Pass.Text; 
+                string Password = TextBox2.Text; 
                 con.Open();
-                string qry = "select * from Register where Email=@Email and Password=@Password";
+                string qry = "select Email,Password from Register where Email=@Email and Password=@Password";
                 SqlCommand cmd = new SqlCommand(qry, con);
-                SqlDataReader sdr = cmd.ExecuteReader();
+               
                 cmd.Parameters.AddWithValue("@Email", Email);
-                cmd.Parameters.AddWithValue("Password", Password);
-
-
-
+                cmd.Parameters.AddWithValue("@Password", Password);
+                SqlDataReader sdr = cmd.ExecuteReader();
                 if (sdr.HasRows == true)
                 {
-                    Response.Write("Sign in successful");
                     Response.Redirect("Home1teacher.aspx");
-
+                    
                 }
                 else
                 {
-                    Response.Write("Details incorrect, Please try again");
+                    MessageBox.Show("hi y kas","Incorrect", MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
 
             }
@@ -86,6 +79,9 @@ namespace ACADPORTAL1
             {
                 con.Close();
             }
+        }
+        protected void TextBox2_TextChanged2(object sender, EventArgs e)
+        {
 
         }
     }

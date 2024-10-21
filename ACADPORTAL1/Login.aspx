@@ -2,11 +2,8 @@
 
 <!DOCTYPE html>
 <script runat="server">
-  
  
 </script>
-
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Login</title>
@@ -18,7 +15,6 @@
             font-weight: normal;
             text-decoration: underline;
         }
-      
         </style>
 </head>
 <body>
@@ -39,7 +35,7 @@
                         <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style16" Height="36px" OnTextChanged="TextBox1_TextChanged1" Width="350px" placeholder="example@gmail.com"></asp:TextBox>
                         <br />
                                   <p class="auto-style18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="ForgotPassword.aspx" style="text-align:right">Forgot Password?</a></p>
-                              <input type="password" value="" id="Pass" class="auto-style21" placeholder="agh39d_#^#*" name="Pass"/><br />
+                            &nbsp;<asp:TextBox ID="TextBox2" runat="server" class="auto-style21" OnTextChanged="TextBox2_TextChanged2"></asp:TextBox>  <br />
                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" onclick="myFunction()"/>Show Password
                         
                        

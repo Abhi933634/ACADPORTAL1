@@ -77,7 +77,6 @@
     <Content Include="Attendence.aspx" />
     <Content Include="Attendence.css" />
     <Content Include="Attendence.js" />
-    <Content Include="ConfirmLoginWithOtp.aspx" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="Home1teacher.aspx" />
     <Content Include="Home1teacher.css" />
@@ -104,7 +103,6 @@
     <Content Include="Signups.aspx" />
     <Content Include="Signups.css" />
     <Content Include="Student-Home.aspx" />
-    <Content Include="TEST.aspx" />
     <Content Include="TimeTable.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -122,13 +120,6 @@
     </Compile>
     <Compile Include="Attendence.aspx.designer.cs">
       <DependentUpon>Attendence.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ConfirmLoginWithOtp.aspx.cs">
-      <DependentUpon>ConfirmLoginWithOtp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ConfirmLoginWithOtp.aspx.designer.cs">
-      <DependentUpon>ConfirmLoginWithOtp.aspx</DependentUpon>
     </Compile>
     <Compile Include="ForgotPassword.aspx.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
@@ -172,13 +163,6 @@
     </Compile>
     <Compile Include="Student-Home.aspx.designer.cs">
       <DependentUpon>Student-Home.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TEST.aspx.cs">
-      <DependentUpon>TEST.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TEST.aspx.designer.cs">
-      <DependentUpon>TEST.aspx</DependentUpon>
     </Compile>
     <Compile Include="TimeTable.aspx.cs">
       <DependentUpon>TimeTable.aspx</DependentUpon>
