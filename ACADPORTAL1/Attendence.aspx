@@ -60,11 +60,11 @@
             <span style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776; </span> 
             <span style="font-family: Georgia, serif; font-size: 50px; text-align: right">ACADPORTAL</span>
             <div class="topnav" id="myTopnav">
-                <a href="#home" class="active">Home</a>
-                <a href="#news">Attendence</a>
+                <a href="home.aspx" class="active">Home</a>
+                <a href="Attendence.aspx">Attendence</a>
                 <a href="#contact">Notes</a>
                 <a href="#about">Notification</a>
-                <a href="#about">Time Table</a>
+                <a href="TimeTable.aspx">Time Table</a>
                 <a href="#about" class="auto-style5">Library</a>
             </div>
         </div>

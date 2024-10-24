@@ -103,6 +103,7 @@
     <Content Include="Signups.aspx" />
     <Content Include="Signups.css" />
     <Content Include="Student-Home.aspx" />
+    <Content Include="Students.aspx" />
     <Content Include="TimeTable.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -163,6 +164,13 @@
     </Compile>
     <Compile Include="Student-Home.aspx.designer.cs">
       <DependentUpon>Student-Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Students.aspx.cs">
+      <DependentUpon>Students.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Students.aspx.designer.cs">
+      <DependentUpon>Students.aspx</DependentUpon>
     </Compile>
     <Compile Include="TimeTable.aspx.cs">
       <DependentUpon>TimeTable.aspx</DependentUpon>

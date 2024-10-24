@@ -39,6 +39,12 @@ table th {
 .drop{
     border-radius:10px;
 }
+        .auto-style1 {
+            width: 142px;
+        }
+        .auto-style2 {
+            height: 1.8em;
+        }
     </style>
 </head>
 <body>
@@ -57,6 +63,7 @@ table th {
     </asp:DropDownList>
   &nbsp;
     <asp:Button ID="Button1" runat="server" Text="Show" CssClass="drop" />
+    <asp:Button ID="Save" runat="server" OnClick="Button2_Click" Text="Save" />
   <table>
     <caption>Timetable</caption>
     <tr>
@@ -66,98 +73,133 @@ table th {
       <th>Wednesday</th>
       <th>Thursday</th>
       <th>Friday</th>
-      <th>Saturday</th>
-      <th>Sunday</th>
     </tr>
     <tr>
-      <td>9:20 </td>
-      <td contenteditable="">PS p2</td>
-      <td contenteditable="">sa</td>
-      <td contenteditable="">sa</td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
+      <td class="auto-style2">&nbsp;<input id="Text1" class="auto-style1" type="text" /></td>
+      <td contenteditable="" class="auto-style2"><input id="1" type="text" class="auto-style1" /></td>
+      <td contenteditable="" class="auto-style2"><input id="2" type="text" class="auto-style1" /></td>
+      <td contenteditable="" class="auto-style2"><input id="3" type="text" class="auto-style1" /></td>
+      <td contenteditable="" class="auto-style2"><input id="4" type="text" class="auto-style1" /></td>
+      <td contenteditable="" class="auto-style2"><input id="5" type="text" class="auto-style1" /></td>
     </tr>
     <tr>
-      <td>10:15 </td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
+      <td>
+          <input id="Text2" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="6" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="7" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="8" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="9" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="10" class="auto-style1" type="text" /></td>
+    
     </tr>
     <tr>
-      <td>11:15 </td>
-      <td contenteditable=""></td>
-      <td contenteditable="">PS</td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
+      <td>
+          <input id="Text3" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="11" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="12" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="13" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="14" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="15" class="auto-style1" type="text" /></td>
+     
     </tr>
     <tr>
-      <td>12:05 </td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
+      <td>&nbsp;<input id="Text4" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="16" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="17" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="18" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="19" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="20" class="auto-style1" type="text" /></td>
+      
     </tr>
     <tr>
-      <td>1:30 </td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
+      <td class="auto-style2">
+          <input id="Text5" class="auto-style1" type="text" /></td>
+      <td contenteditable="" class="auto-style2">
+          <input id="21" class="auto-style1" type="text" /></td>
+      <td contenteditable="" class="auto-style2">
+          <input id="22" class="auto-style1" type="text" /></td>
+      <td contenteditable="" class="auto-style2">
+          <input id="23" class="auto-style1" type="text" /></td>
+      <td contenteditable="" class="auto-style2">
+          <input id="24" class="auto-style1" type="text" /></td>
+      <td contenteditable="" class="auto-style2">
+          <input id="25" class="auto-style1" type="text" /></td>
+      
     </tr>
     <tr>
-      <td>02:25 </td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
+      <td class="auto-style2">
+          <input id="Text6" class="auto-style1" type="text" /></td>
+      <td contenteditable="" class="auto-style2">
+          <input id="26" class="auto-style1" type="text" /></td>
+      <td contenteditable="" class="auto-style2">
+          <input id="27" class="auto-style1" type="text" /></td>
+      <td contenteditable="" class="auto-style2">
+          <input id="28" class="auto-style1" type="text" /></td>
+      <td contenteditable="" class="auto-style2">
+          <input id="29" class="auto-style1" type="text" /></td>
+      <td contenteditable="" class="auto-style2">
+          <input id="30" class="auto-style1" type="text" /></td>
+     
     </tr>
     <tr>
-      <td>03:20 </td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
+      <td>
+          <input id="Text7" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="31" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="32" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="33" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="34" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="35" class="auto-style1" type="text" /></td>
+     
     </tr>
     <tr>
-      <td>04:15 </td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
+      <td class="auto-style2">
+          <input id="Text8" class="auto-style1" type="text" /></td>
+      <td contenteditable="" class="auto-style2">
+          <input id="36" class="auto-style1" type="text" /></td>
+      <td contenteditable="" class="auto-style2">
+          <input id="37" class="auto-style1" type="text" /></td>
+      <td contenteditable="" class="auto-style2">
+          <input id="38" class="auto-style1" type="text" /></td>
+      <td contenteditable="" class="auto-style2">
+          <input id="39" class="auto-style1" type="text" /></td>
+      <td contenteditable="" class="auto-style2">
+          <input id="40" class="auto-style1" type="text" /></td>
+      
     </tr>
     <tr>
-      <td>05:10 </td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
-      <td contenteditable=""></td>
+      <td>
+          <input id="Text9" class="auto-style1" type="text" /></td>
+      <td contenteditable="n">
+          <input id="41" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="42" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="43" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="44" class="auto-style1" type="text" /></td>
+      <td contenteditable="">
+          <input id="45" class="auto-style1" type="text" /></td>
+    
     </tr>
   </table>
 </div>
