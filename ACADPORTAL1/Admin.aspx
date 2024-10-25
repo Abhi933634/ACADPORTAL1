@@ -21,12 +21,15 @@
   width: auto;
   height: auto;
   transition: .5s ease;
-  backface-visibility: hidden;
+  backface-visibility:visible;
   
 }
-
+.container:hover .middle {
+  bottom: 0;
+  height: 100%;
+}
 .middle {
-  transition: .5s ease;
+  /*transition: .5s ease;
   opacity: 0;
   position: absolute;
   top: 50%;
@@ -34,6 +37,16 @@
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+      */
+    position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #15616d;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
 }
 
 .container:hover .image {
@@ -49,6 +62,9 @@
   color: white;
   font-size: 16px;
   padding: 16px 32px;
+    position: absolute;
+    top:35%;
+    
 }
 .image{
     width:75%;
@@ -56,6 +72,7 @@
 .parent{
     display:flex;
     width:50%;
+    background-color:#F2E5BF;
 }
         .auto-style8 {
             width: 100%;
@@ -70,6 +87,7 @@
            font-weight:500;
            border-radius:10px;
         }
+
     </style>
     </head>
 <body >  

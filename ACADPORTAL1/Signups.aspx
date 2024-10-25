@@ -33,8 +33,11 @@
                          box-shadow: 0 4px 200px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
                          border-radius: 25px;
                      }
+                     .auto-style21 {
+                         margin-left: 320px;
+                     }
                  </style>
-                 <h1 class="auto-style13">ACADPORTAL: CLASSIC TO SMART DEPARTMENT</h1>
+                 <h1 class="auto-style21">ACADPORTAL: CLASSIC TO SMART DEPARTMENT</h1>
                 <link href="Signups.css" rel="stylesheet"/>
 </head>
 <body style="width: 94%; height: 804px;">

@@ -54,15 +54,14 @@ table th {
 <div class="wrapper">
     <asp:DropDownList ID="DropDownList1" runat="server">
         <asp:ListItem>Semester</asp:ListItem>
-        <asp:ListItem>i</asp:ListItem>
-        <asp:ListItem>ii</asp:ListItem>
-        <asp:ListItem>iii</asp:ListItem>
-        <asp:ListItem>iv</asp:ListItem>
-        <asp:ListItem>v</asp:ListItem>
-        <asp:ListItem>vi</asp:ListItem>
+        <asp:ListItem>1</asp:ListItem>
+        <asp:ListItem>2</asp:ListItem>
+        <asp:ListItem>3</asp:ListItem>
+        <asp:ListItem>4</asp:ListItem>
+        <asp:ListItem>5</asp:ListItem>
+        <asp:ListItem>6</asp:ListItem>
     </asp:DropDownList>
   &nbsp;
-    <asp:Button ID="Button1" runat="server" Text="Show" CssClass="drop" />
     <asp:Button ID="Save" runat="server" OnClick="Button2_Click" Text="Save" />
   <table>
     <caption>Timetable</caption>
@@ -73,133 +72,81 @@ table th {
       <th>Wednesday</th>
       <th>Thursday</th>
       <th>Friday</th>
+        
     </tr>
     <tr>
-      <td class="auto-style2">&nbsp;<input id="Text1" class="auto-style1" type="text" /></td>
-      <td contenteditable="" class="auto-style2"><input id="1" type="text" class="auto-style1" /></td>
-      <td contenteditable="" class="auto-style2"><input id="2" type="text" class="auto-style1" /></td>
-      <td contenteditable="" class="auto-style2"><input id="3" type="text" class="auto-style1" /></td>
-      <td contenteditable="" class="auto-style2"><input id="4" type="text" class="auto-style1" /></td>
-      <td contenteditable="" class="auto-style2"><input id="5" type="text" class="auto-style1" /></td>
+      <td class="auto-style2"><asp:TextBox ID="time1" runat="server" class="auto-style1"></asp:TextBox ></td>
+      <td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox1" runat="server"  class="auto-style1"></asp:TextBox></td>
+      <td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox2" runat="server"  class="auto-style1"></asp:TextBox></td>
+      <td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox3" runat="server"  class="auto-style1"></asp:TextBox></td>
+      <td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox4" runat="server"  class="auto-style1"></asp:TextBox></td>
+      <td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox5" runat="server"  class="auto-style1"></asp:TextBox></td>
     </tr>
     <tr>
-      <td>
-          <input id="Text2" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="6" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="7" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="8" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="9" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="10" class="auto-style1" type="text" /></td>
-    
+              <td contenteditable="" class="auto-style1"><asp:TextBox ID="time2" runat="server"  class="auto-style1"></asp:TextBox></td>
+         <td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox6" runat="server"  class="auto-style1"></asp:TextBox></td>
+         <td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox7" runat="server"  class="auto-style1"></asp:TextBox></td>
+         <td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox8" runat="server"  class="auto-style1"></asp:TextBox></td>
+         <td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox9" runat="server"  class="auto-style1"></asp:TextBox></td>
+    <td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox10" runat="server" class="auto-style1"></asp:TextBox></td>
     </tr>
     <tr>
-      <td>
-          <input id="Text3" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="11" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="12" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="13" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="14" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="15" class="auto-style1" type="text" /></td>
+          <td contenteditable="" class="auto-style1"><asp:TextBox ID="time3" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox11" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox12" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox13" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox14" runat="server" class="auto-style1"></asp:TextBox></td>
+        <td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox15" runat="server" class="auto-style1"></asp:TextBox></td>
+        </tr>
+    <tr>
+          <td contenteditable="" class="auto-style1"><asp:TextBox ID="time4" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox16" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox17" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox18" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox19" runat="server" class="auto-style1"></asp:TextBox></td>
+        <td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox20" runat="server" class="auto-style1"></asp:TextBox></td>
+    </tr>
+    <tr>
+              <td contenteditable="" class="auto-style1"><asp:TextBox ID="time5" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox21" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox22" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox23" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox24" runat="server" class="auto-style1"></asp:TextBox></td>
+        <td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox25" runat="server" class="auto-style1"></asp:TextBox></td>
+    </tr>
+    <tr>
+          <td contenteditable="" class="auto-style1"><asp:TextBox ID="time6" runat="server"  class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox26" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox27" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox28" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox29" runat="server" class="auto-style1"></asp:TextBox></td>
+        <td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox30" runat="server" class="auto-style1"></asp:TextBox></td>
+    </tr>
+    <tr>
+          <td contenteditable="" class="auto-style1"><asp:TextBox ID="time7" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox31" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox32" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox33" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox34" runat="server" class="auto-style1"></asp:TextBox></td>
+        <td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox35" runat="server" class="auto-style1"></asp:TextBox></td>
      
     </tr>
     <tr>
-      <td>&nbsp;<input id="Text4" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="16" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="17" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="18" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="19" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="20" class="auto-style1" type="text" /></td>
+         <td contenteditable="" class="auto-style1"><asp:TextBox ID="time8" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox36" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox37" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox38" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox39" runat="server" class="auto-style1"></asp:TextBox></td>
+        <td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox40" runat="server" class="auto-style1"></asp:TextBox></td>
       
     </tr>
     <tr>
-      <td class="auto-style2">
-          <input id="Text5" class="auto-style1" type="text" /></td>
-      <td contenteditable="" class="auto-style2">
-          <input id="21" class="auto-style1" type="text" /></td>
-      <td contenteditable="" class="auto-style2">
-          <input id="22" class="auto-style1" type="text" /></td>
-      <td contenteditable="" class="auto-style2">
-          <input id="23" class="auto-style1" type="text" /></td>
-      <td contenteditable="" class="auto-style2">
-          <input id="24" class="auto-style1" type="text" /></td>
-      <td contenteditable="" class="auto-style2">
-          <input id="25" class="auto-style1" type="text" /></td>
-      
-    </tr>
-    <tr>
-      <td class="auto-style2">
-          <input id="Text6" class="auto-style1" type="text" /></td>
-      <td contenteditable="" class="auto-style2">
-          <input id="26" class="auto-style1" type="text" /></td>
-      <td contenteditable="" class="auto-style2">
-          <input id="27" class="auto-style1" type="text" /></td>
-      <td contenteditable="" class="auto-style2">
-          <input id="28" class="auto-style1" type="text" /></td>
-      <td contenteditable="" class="auto-style2">
-          <input id="29" class="auto-style1" type="text" /></td>
-      <td contenteditable="" class="auto-style2">
-          <input id="30" class="auto-style1" type="text" /></td>
-     
-    </tr>
-    <tr>
-      <td>
-          <input id="Text7" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="31" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="32" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="33" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="34" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="35" class="auto-style1" type="text" /></td>
-     
-    </tr>
-    <tr>
-      <td class="auto-style2">
-          <input id="Text8" class="auto-style1" type="text" /></td>
-      <td contenteditable="" class="auto-style2">
-          <input id="36" class="auto-style1" type="text" /></td>
-      <td contenteditable="" class="auto-style2">
-          <input id="37" class="auto-style1" type="text" /></td>
-      <td contenteditable="" class="auto-style2">
-          <input id="38" class="auto-style1" type="text" /></td>
-      <td contenteditable="" class="auto-style2">
-          <input id="39" class="auto-style1" type="text" /></td>
-      <td contenteditable="" class="auto-style2">
-          <input id="40" class="auto-style1" type="text" /></td>
-      
-    </tr>
-    <tr>
-      <td>
-          <input id="Text9" class="auto-style1" type="text" /></td>
-      <td contenteditable="n">
-          <input id="41" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="42" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="43" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="44" class="auto-style1" type="text" /></td>
-      <td contenteditable="">
-          <input id="45" class="auto-style1" type="text" /></td>
-    
+         <td contenteditable="" class="auto-style1"><asp:TextBox ID="time9" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox41" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox42" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox43" runat="server" class="auto-style1"></asp:TextBox></td>
+<td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox44" runat="server" class="auto-style1"></asp:TextBox></td>
+        <td contenteditable="" class="auto-style1"><asp:TextBox ID="TextBox45" runat="server" class="auto-style1"></asp:TextBox></td>
     </tr>
   </table>
 </div>
