@@ -30,12 +30,12 @@
                                 <strong> Login </strong>
                             </div>
                             <p class="auto-style14">&nbsp; Doesn't have an account yet?<a href="Signups.aspx" > Sign up</a></p> 
-                           <p class="auto-style17">&nbsp;&nbsp; &nbsp; Username</p>
+                           <p class="auto-style17">&nbsp;&nbsp;&nbsp;&nbsp; Email</p>
                         &nbsp;
-                        <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style16" Height="36px" OnTextChanged="TextBox1_TextChanged1" Width="350px" placeholder="example@gmail.com"></asp:TextBox>
+                        <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style16" Height="36px" OnTextChanged="TextBox1_TextChanged1" Width="350px" placeholder="example@gmail.com"  type="email"></asp:TextBox>
                         <br />
                                   <p class="auto-style18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="ForgotPassword.aspx" style="text-align:right">Forgot Password?</a></p>
-                            &nbsp;<asp:TextBox ID="TextBox2" runat="server" class="auto-style21" OnTextChanged="TextBox2_TextChanged2"></asp:TextBox>  <br />
+                            &nbsp;<asp:TextBox ID="TextBox2" runat="server" class="auto-style21" OnTextChanged="TextBox2_TextChanged2" type="password"  ></asp:TextBox>  <br />
                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" onclick="myFunction()"/>Show Password
                         
                        

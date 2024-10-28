@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Signup</title>
+   <script src="Signups.js"></script>
                  <style type="text/css">
                      .auto-style15 {
                          width: 537px;
@@ -12,7 +13,7 @@
                      }
                      .auto-style17 {
                          width: 544px;
-                        height: 483px;
+                        height: 625px;
                      }
                      .auto-style18 {
                          height: 617px;
@@ -36,12 +37,23 @@
                      .auto-style21 {
                          margin-left: 320px;
                      }
+                     .auto-style23 {
+                         width: 161px;
+                         height: 37px;
+                     }
+                     .auto-style24 {
+                         height: 37px;
+                     }
                  </style>
+                    <script>
+                       
+}
+                    </script>
                  <h1 class="auto-style21">ACADPORTAL: CLASSIC TO SMART DEPARTMENT</h1>
                 <link href="Signups.css" rel="stylesheet"/>
 </head>
 <body style="width: 94%; height: 804px;">
-    <form id="form1" runat="server" class="auto-style19">
+    <form id="form1" runat="server" class="auto-style19" onsubmit="return validateform() " method="post">
         
             <table class="auto-style17">
                 <tr>
@@ -51,19 +63,20 @@
                                 <tr>
                                     <td class="auto-style9">Name :</td>
                                     <td class="auto-style10">
-                                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox1" runat="server" CausesValidation="True" OnDataBinding="Button1_Click" OnTextChanged="TextBox1_TextChanged" name="fname" type="text"></asp:TextBox>
+                                        
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style6">Father&#39;s Name :</td>
                                     <td>
-                                        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox2" runat="server" type="text"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style6">Mother&#39;s name :</td>
                                     <td>
-                                        <asp:TextBox ID="TextBox3" runat="server" OnTextChanged="TextBox3_TextChanged"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox3" runat="server" OnTextChanged="TextBox3_TextChanged" type="text"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -197,37 +210,37 @@
                                 <tr>
                                     <td class="auto-style6">Mobile no. :</td>
                                     <td>
-                                        <asp:TextBox ID="txtmobile" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtmobile" runat="server" type="tel"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style6">E-mail :</td>
                                     <td>
-                                        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox4" runat="server" type="email"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style11">Permanent Address :</td>
                                     <td class="auto-style12">
-                                        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox5" runat="server" type="text"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="auto-style6">State :</td>
-                                    <td>
-                                        <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                                    <td class="auto-style23">State :</td>
+                                    <td class="auto-style24">
+                                        <asp:TextBox ID="TextBox6" runat="server" type="text"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style6">City :</td>
                                     <td>
-                                        <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox7" runat="server" type="text"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style6">Pin Code :</td>
                                     <td>
-                                        <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox8" runat="server" type="number"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -236,12 +249,19 @@
                                         <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
+                                                      <tr>
+                          <td class="auto-style6">Enrollment No.</td>
+                          <td>
+                              <asp:TextBox ID="TextBox10" runat="server" OnTextChanged="TextBox10_TextChanged"></asp:TextBox>
+                          </td>
+                      </tr>
                                 <tr>
                                     <td class="auto-style6">&nbsp;</td>
                                     <td>
                                         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit" />
                                     </td>
                                 </tr>
+
                             </table>
                         </div>
                     </td>

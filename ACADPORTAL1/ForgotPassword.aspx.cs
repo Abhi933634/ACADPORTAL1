@@ -80,8 +80,9 @@ namespace ACADPORTAL1
             int otp = Convert.ToInt32(login_otp.Text);
             if (ForgotPassword.myRandom == otp)
             {
-                // Response.Redirect("Home1teacher.aspx");
+                 Response.Redirect("Home1teacher.aspx");
                 MessageBox.Show("hi y kas", "correct", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
             }
             else
             {

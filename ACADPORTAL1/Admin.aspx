@@ -120,7 +120,7 @@
         <div class="container">
           <img src="photus/f-removebg-preview.png" alt="Avatar" class="image" />
           <div class="middle">
-            <div class="text"><asp:Button ID="Button1" runat="server" Text="Faculty (edit)" CssClass="button" /></div>
+            <div class="text"><asp:Button ID="Button1" runat="server" Text="Faculty (edit)" OnClick="Button1_Click"  CssClass="button" /></div>
           </div>
         </div>
         

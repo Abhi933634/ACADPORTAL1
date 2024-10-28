@@ -41,7 +41,7 @@
             <h1>Login with OTP</h1>
         </div>
         <div>
-            <asp:Table runat="server" id="table">
+            <asp:Table runat="server" id="TextBox1">
                 <asp:TableRow>
                     <asp:TableCell> <asp:Label ID="Label1" runat="server" Text="Email:"></asp:Label></asp:TableCell>
                     <asp:TableCell> <asp:TextBox ID="email" runat="server" placeholder="Enter your email"></asp:TextBox></asp:TableCell>

@@ -77,6 +77,7 @@
     <Content Include="Attendence.aspx" />
     <Content Include="Attendence.css" />
     <Content Include="Attendence.js" />
+    <Content Include="Faculty.aspx" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="Home1teacher.aspx" />
     <Content Include="Home1teacher.css" />
@@ -84,7 +85,6 @@
     <Content Include="Login.aspx" />
     <Content Include="Login.css" />
     <Content Include="Login.js" />
-    <Content Include="LoginWithOtp.aspx" />
     <Content Include="photus\1.jpg" />
     <Content Include="photus\2.jpg" />
     <Content Include="photus\3.jpg" />
@@ -102,6 +102,7 @@
     <Content Include="photus\time,jpeg.png" />
     <Content Include="Signups.aspx" />
     <Content Include="Signups.css" />
+    <Content Include="Signups.js" />
     <Content Include="Student-Home.aspx" />
     <Content Include="Students.aspx" />
     <Content Include="TimeTable.aspx" />
@@ -122,12 +123,22 @@
     <Compile Include="Attendence.aspx.designer.cs">
       <DependentUpon>Attendence.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Faculty.aspx.cs">
+      <DependentUpon>Faculty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty.aspx.designer.cs">
+      <DependentUpon>Faculty.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ForgotPassword.aspx.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ForgotPassword.aspx.designer.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home1teacher.aspx.cs">
       <DependentUpon>Home1teacher.aspx</DependentUpon>
@@ -142,13 +153,6 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="LoginWithOtp.aspx.cs">
-      <DependentUpon>LoginWithOtp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="LoginWithOtp.aspx.designer.cs">
-      <DependentUpon>LoginWithOtp.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Signups.aspx.cs">
