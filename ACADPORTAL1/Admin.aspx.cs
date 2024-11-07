@@ -13,5 +13,21 @@ namespace ACADPORTAL1
         {
 
         }
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Faculty.aspx");
+        }
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Students.aspx");
+        }
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("TimeTable.aspx");
+        }
+        protected void Unnamed1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

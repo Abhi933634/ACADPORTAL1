@@ -30,19 +30,25 @@
                                 <strong> Login </strong>
                             </div>
                             <p class="auto-style14">&nbsp; Doesn't have an account yet?<a href="Signups.aspx" > Sign up</a></p> 
-                           <p class="auto-style17">&nbsp;&nbsp;&nbsp;&nbsp; Email</p>
+                           <p class="auto-style17">&nbsp; Select Category:
+                               <asp:DropDownList ID="DropDownList1" runat="server">
+                                   <asp:ListItem>Student</asp:ListItem>
+                                   <asp:ListItem>Teacher</asp:ListItem>
+                                   <asp:ListItem>Admin</asp:ListItem>
+                               </asp:DropDownList>
+                            </p>
+                            <p class="auto-style17">&nbsp;</p>
+                            <p class="auto-style17">&nbsp;</p>
+                            <p class="auto-style17">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Email</p>
                         &nbsp;
                         <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style16" Height="36px" OnTextChanged="TextBox1_TextChanged1" Width="350px" placeholder="example@gmail.com"  type="email"></asp:TextBox>
                         <br />
-                                  <p class="auto-style18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="ForgotPassword.aspx" style="text-align:right">Forgot Password?</a></p>
-                            &nbsp;<asp:TextBox ID="TextBox2" runat="server" class="auto-style21" OnTextChanged="TextBox2_TextChanged2" type="password"  ></asp:TextBox>  <br />
-                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" onclick="myFunction()"/>Show Password
-                        
-                       
+                                  <p class="auto-style18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            &nbsp;<asp:TextBox ID="TextBox2" runat="server" class="auto-style21" OnTextChanged="TextBox2_TextChanged2" type="password"  ></asp:TextBox>
                               <br />
                         
                        
-                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="ForgotPassword.aspx" style="text-align:right">Login with otp</a><br />
                      
                         &nbsp;<asp:Button ID="Button2" runat="server" Height="43px" OnClick="loginbtn_Click" Text="Login" Width="305px" CssClass="auto-style22" style="border-radius:25px" />
                     </div>

@@ -7,21 +7,24 @@ using System.Web.UI.WebControls;
 
 namespace ACADPORTAL1
 {
-    public partial class Home1teacher : System.Web.UI.Page
+    public partial class Student_Home : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //if (Session["Email"] != null)
+            //{
+            //    //lblUserID.Text = Session["UserID"].ToString();
+            //    //Labelname.Text = Session["Username"].ToString();
+            //    //lblFullName.Text = Session["FullName"].ToString();
+            //    //lblEmail.Text = Session["Email"].ToString();
+            //    //Labelname
 
-        }
 
-        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
-        {
-
-        }
-
-        protected void ImageButton1_Click1(object sender, ImageClickEventArgs e)
-        {
-
+            //}
+            //else
+            //{ // Redirect to login page if session is null
+            //    Response. Redirect("Login.aspx");
+            //}
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -41,8 +44,7 @@ namespace ACADPORTAL1
             // Redirect to the Information page
             Response.Redirect("Information.aspx");
         }
-        protected void btnTimetable_Click(object sender, EventArgs e)
-        {
+        protected void btnTimetable_Click(object sender, EventArgs e) {
             // Redirect to the Timetable page
             Response.Redirect("Timetable.aspx");
         }
@@ -50,19 +52,12 @@ namespace ACADPORTAL1
         {
             //Redirect to the Result page
             Response.Redirect("Result.aspx");
-        }
-        protected void btnAttendance_Click(object sender, EventArgs e)
-        {
+        } protected void btnAttendance_Click(object sender, EventArgs e) {
             // Redirect to the Attendance page
             Response.Redirect("Attendance.aspx");
         }
-        protected void btnNotes_Click(object sender, EventArgs e)
-        {
+        protected void btnNotes_Click(object sender, EventArgs e) {
             // Redirect to the Notes page
-            Response.Redirect("Notes.aspx");
-        }
+            Response.Redirect("Notes.aspx"); }
     }
-
-
-
 }

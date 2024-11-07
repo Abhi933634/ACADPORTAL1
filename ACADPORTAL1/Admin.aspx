@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home1teacher.aspx.cs" Inherits="ACADPORTAL1.Home1teacher" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin.aspx.cs" Inherits="ACADPORTAL1.Admin" %>
 
 <!DOCTYPE html>
 
@@ -115,7 +115,8 @@
                 <br />
             </div>
         </div>
-        <div style=" height:50%;  border:1px solid black; margin-top: 1px;" class="parent" id="tops">
+        <div style="float:left">
+        <div style=" height:50%;   border:1px solid black; margin-top: 1px;" class="parent" id="tops">
 
         <div class="container">
           <img src="photus/f-removebg-preview.png" alt="Avatar" class="image" />
@@ -128,7 +129,7 @@
             <img src="photus/student-removebg-preview.png" alt="Avatar" class="image" />
             <div class="middle">
               <div class="text">
-                  <asp:Button ID="Button2" runat="server" Text="Student (edit)" CssClass="button" /></div>
+                  <asp:Button ID="Button2" runat="server" Text="Student (edit)" CssClass="button" OnClick="Button2_Click" /></div>
             </div>
           </div>
                     <div class="container">
@@ -142,7 +143,7 @@
                           <div class="container">
           <img src="photus/time,jpeg.png" alt="Avatar" class="image" />
           <div class="middle">
-            <div class="text"><asp:Button ID="Button4" runat="server" Text="TimeTable (edit)" CssClass="button" /></div>
+            <div class="text" style="width: 224px"><asp:Button ID="Button4" runat="server" Text="TimeTable (edit)" CssClass="button" OnClick="Button4_Click"/></div>
           </div>
         </div>
                               <div class="container">
@@ -177,7 +178,12 @@
                 <div class="text"><asp:Button ID="Button9" runat="server" Text="Notice (edit)" CssClass="button" /></div>
               </div>
             </div>
+        </div>
             </div>
+        <div style=" float:left;">Notification </div>
+        <br />
+        <asp:GridView runat="server" OnSelectedIndexChanged="Unnamed1_SelectedIndexChanged" DataSourceID="SqlDataSource1"></asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Notification %>" SelectCommand="SELECT [Date], [Notice] FROM [Notification]"></asp:SqlDataSource>
         </form>
     </body>
 </html>

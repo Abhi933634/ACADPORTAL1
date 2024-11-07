@@ -4,92 +4,76 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <style>
-        body {
-  background: #ECF0F1;
+    <title>Time Table</title>
+  <style>
+      body {
+    background-color: #d6d6f5;
+    background-image: url('photus/college.jpg');
+    background-size: 100%;
+    width: 100%;
+    font-family: cursive;
 }
+                  .gridview1 {
+                width: 100%;
+                border-collapse: collapse;
+                text-align: center;
+                background-color:dimgrey;
+            }
 
-.wrapper {
-  margin: 50px auto;
-  width: 1000px;
-}
+            .gridview1 th, .gridview td {
+                padding: 10px;
+                border: 1px solid #ddd;
+            }
 
-table {
-  table-layout: fixed;
-  width: 100%;
-  font-size: 18px;
-  font-weight: 300;
-}
-table caption {
-  text-align: center;
-  font-size: 1.5em;
-  padding: 0.35em;
-}
-table tr {
-  height: 1.85em;
-}
-table td, table th {
-  text-align: center;
-  background: #FAFAFA;
-}
-table th {
-  font-weight: 400;
-}
-.drop{
-    border-radius:10px;
-}
-        .auto-style1 {
-            width: 142px;
-        }
-        .auto-style2 {
-            height: 1.8em;
-        }
-    </style>
+            .gridview1 th {
+                background-color: #4CAF50;
+                color: white;
+            }
+            .gridview1 tr:hover {
+                background-color: #ddd;
+            }         
+  </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            
-<div class="wrapper">
-    <asp:DropDownList ID="DropDownList1" runat="server">
-        <asp:ListItem>Semester</asp:ListItem>
-        <asp:ListItem>1</asp:ListItem>
-        <asp:ListItem>2</asp:ListItem>
-        <asp:ListItem>3</asp:ListItem>
-        <asp:ListItem>4</asp:ListItem>
-        <asp:ListItem>5</asp:ListItem>
-        <asp:ListItem>6</asp:ListItem>
-    </asp:DropDownList>
-  &nbsp;
-    <asp:Button ID="Save" runat="server" OnClick="Button2_Click" Text="Save" />
-  <table>
-    <caption>Timetable</caption>
-    <tr>
-      <th>Time</th>
-      <th>Monday</th>
-      <th>Tuesday</th>
-      <th>Wednesday</th>
-      <th>Thursday</th>
-      <th>Friday</th>
-        
-    </tr>
-    <tr>
-      <td class="auto-style2"><asp:TextBox ID="time1" runat="server" class="auto-style1"></asp:TextBox ></td>
-      <td  class="auto-style1"><asp:TextBox ID="TextBox1" runat="server"  class="auto-style1"></asp:TextBox></td>
-      <td  class="auto-style1"><asp:TextBox ID="TextBox2" runat="server"  class="auto-style1"></asp:TextBox></td>
-      <td  class="auto-style1"><asp:TextBox ID="TextBox3" runat="server"  class="auto-style1"></asp:TextBox></td>
-      <td  class="auto-style1"><asp:TextBox ID="TextBox4" runat="server"  class="auto-style1"></asp:TextBox></td>
-      <td  class="auto-style1"><asp:TextBox ID="TextBox5" runat="server"  class="auto-style1"></asp:TextBox></td>
-    </tr>
-    </table>
-</div>
-        </div>
-        <div>
-            <asp:Panel ID="Panel1" runat="server" Height="300px">
-                <br />
-            </asp:Panel>
-        </div>
+         <asp:Button ID="Button1" runat="server" Text="&#x2190;" Height="43px" Width="53px" OnClick="admin" />
+ <h1 style="text-align:center;" class="auto-style1">Time Table (Semester 5th)</h1></div>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource1" CssClass="gridview1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+            <Columns>
+                <asp:CommandField ShowEditButton="True" />
+                <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
+                <asp:BoundField DataField="Time" HeaderText="Time" SortExpression="Time" />
+                <asp:BoundField DataField="Monday" HeaderText="Monday" SortExpression="Monday" />
+                <asp:BoundField DataField="Tuesday" HeaderText="Tuesday" SortExpression="Tuesday" />
+                <asp:BoundField DataField="Wednesday" HeaderText="Wednesday" SortExpression="Wednesday" />
+                <asp:BoundField DataField="Thursday" HeaderText="Thursday" SortExpression="Thursday" />
+                <asp:BoundField DataField="Friday" HeaderText="Friday" SortExpression="Friday" />
+            </Columns>
+        </asp:GridView>
+     
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:timetableconnection %>" DeleteCommand="DELETE FROM [Timetable1] WHERE [id] = @id" InsertCommand="INSERT INTO [Timetable1] ([Time], [Monday], [Tuesday], [Wednesday], [Thursday], [Friday]) VALUES (@Time, @Monday, @Tuesday, @Wednesday, @Thursday, @Friday)" ProviderName="<%$ ConnectionStrings:timetableconnection.ProviderName %>" SelectCommand="SELECT * FROM [Timetable1]" UpdateCommand="UPDATE [Timetable1] SET [Time] = @Time, [Monday] = @Monday, [Tuesday] = @Tuesday, [Wednesday] = @Wednesday, [Thursday] = @Thursday, [Friday] = @Friday WHERE [id] = @id">
+            <DeleteParameters>
+                <asp:Parameter Name="id" Type="Int32" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="Time" Type="String" />
+                <asp:Parameter Name="Monday" Type="String" />
+                <asp:Parameter Name="Tuesday" Type="String" />
+                <asp:Parameter Name="Wednesday" Type="String" />
+                <asp:Parameter Name="Thursday" Type="String" />
+                <asp:Parameter Name="Friday" Type="String" />
+            </InsertParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="Time" Type="String" />
+                <asp:Parameter Name="Monday" Type="String" />
+                <asp:Parameter Name="Tuesday" Type="String" />
+                <asp:Parameter Name="Wednesday" Type="String" />
+                <asp:Parameter Name="Thursday" Type="String" />
+                <asp:Parameter Name="Friday" Type="String" />
+                <asp:Parameter Name="id" Type="Int32" />
+            </UpdateParameters>
+        </asp:SqlDataSource>
     </form>
 </body>
 </html>

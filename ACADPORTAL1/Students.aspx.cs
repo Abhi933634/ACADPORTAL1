@@ -7,11 +7,16 @@ using System.Web.UI.WebControls;
 
 namespace ACADPORTAL1
 {
-    public partial class Students : System.Web.UI.Page
+    public partial class GridViewTest : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void home(object sender, EventArgs e)
+        {
+            Response.Redirect("Admin.aspx");
         }
     }
 }

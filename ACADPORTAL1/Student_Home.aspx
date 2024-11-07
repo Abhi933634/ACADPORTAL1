@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home1teacher.aspx.cs" Inherits="ACADPORTAL1.Home1teacher" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Student_Home.aspx.cs" Inherits="ACADPORTAL1.Student_Home" %>
 
 <!DOCTYPE html>
 
@@ -14,7 +14,13 @@
         .auto-style9 {
             height: 441px;
         }
-                .button { background-color: #001524;
+        .auto-style10 {
+            margin-left: 328px;
+        }
+        .auto-style11 {
+            margin-left: 44px;
+        }
+        .button { background-color: #001524;
                   /* Green */
                   border: none;
                   padding: 15px 32px; 
@@ -46,10 +52,10 @@
     </head>
 <body>
     
-    <form id="form1" runat="server" class="auto-style9">
+    <form id="form" runat="server" class="auto-style9">
         <div id="mySidenav" class="sidenav">
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-              <a href="#">Home</a>
+              <a href="#">Dashboard</a>
               <a href="#">Attendence</a>
               <a href="#">Notes</a>
               <a href="#">Marks</a>
@@ -67,36 +73,36 @@
                 <a href="#about">Notification</a>
                 <a href="#about">Time Table</a>
                 <a href="#about" class="auto-style5">Library</a>
-                <br />
+                 <a href="Login.aspx" style="float:right"> logout</a>
             </div>
         </div>
-  <div class="example1">
-    <asp:Panel ID="Panel" runat="server" CssClass="auto-style10" Height="284px" Width="516px">
-        <asp:Table ID="Table" runat="server" CssClass="auto-style11" Height="245px" Width="471px">
-            <asp:TableRow>
-                <asp:TableCell>Name</asp:TableCell>
-                <asp:TableCell>
-                    <asp:Label ID="Labelname" runat="server" Text="Label" Enabled="True"></asp:Label></asp:TableCell>
-            </asp:TableRow>
-             <asp:TableRow>
-            <asp:TableCell>Mobile no.</asp:TableCell>
-            <asp:TableCell>
-                <asp:Label ID="Labelmobile" runat="server" Text="Label"></asp:Label></asp:TableCell>
-        </asp:TableRow>
-                               <asp:TableRow>
-               <asp:TableCell>Enrollment no.</asp:TableCell>
-               <asp:TableCell>
-                   <asp:Label ID="LabelEnroll" runat="server" Text="Label"></asp:Label></asp:TableCell>
-           </asp:TableRow>
-            <asp:TableRow>
-           <asp:TableCell>E-mail</asp:TableCell>
-           <asp:TableCell>
-               <asp:Label ID="Labelemail" runat="server" Text="Label"></asp:Label></asp:TableCell>
-       </asp:TableRow>
-        </asp:Table>
-    </asp:Panel>
-</div>
-               
+        <div class="example1">
+            <asp:Panel ID="Panel" runat="server" CssClass="auto-style10" Height="284px" Width="516px">
+                <asp:Table ID="Table" runat="server" CssClass="auto-style11" Height="245px" Width="471px">
+                    <asp:TableRow>
+                        <asp:TableCell>Name</asp:TableCell>
+                        <asp:TableCell>
+                            <asp:Label ID="Labelname" runat="server" Text="Label" Enabled="True"></asp:Label></asp:TableCell>
+                    </asp:TableRow>
+                     <asp:TableRow>
+                    <asp:TableCell>Mobile no.</asp:TableCell>
+                    <asp:TableCell>
+                        <asp:Label ID="Labelmobile" runat="server" Text="Label"></asp:Label></asp:TableCell>
+                </asp:TableRow>
+                                       <asp:TableRow>
+                       <asp:TableCell>Enrollment no.</asp:TableCell>
+                       <asp:TableCell>
+                           <asp:Label ID="LabelEnroll" runat="server" Text="Label"></asp:Label></asp:TableCell>
+                   </asp:TableRow>
+                    <asp:TableRow>
+                   <asp:TableCell>E-mail</asp:TableCell>
+                   <asp:TableCell>
+                       <asp:Label ID="Labelemail" runat="server" Text="Label"></asp:Label></asp:TableCell>
+               </asp:TableRow>
+                </asp:Table>
+            </asp:Panel>
+        </div>
+        <div>
             <div class="auto-style12">
                 <asp:Button ID="btnInformation" runat="server" Text="Information" OnClick="btnInformation_Click" CssClass="button" />
                 <asp:Button ID="btnTimetable" runat="server" Text="Timetable" OnClick="btnTimetable_Click" CssClass="button" /> 
@@ -105,6 +111,7 @@
                 <asp:Button ID="btnNotes" runat="server" Text="Notes" OnClick="btnNotes_Click" CssClass="button" /><br /> 
                 <asp:Button ID="Button1" runat="server" Text="Notification" OnClick="btnResult_Click" CssClass="button" />
             </div>
+        </div>
     </form>
     </body>
 </html>
