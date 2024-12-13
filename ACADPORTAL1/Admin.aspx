@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Admin</title>
     <link rel="stylesheet" href="Home1teacher.css"/>
     <script src="Home1teacher.js"></script>
     <style type="text/css">
@@ -42,11 +42,11 @@
   bottom: 100%;
   left: 0;
   right: 0;
-  background-color: #15616d;
+  background-color: #white;
   overflow: hidden;
   width: 100%;
   height:0;
-  transition: .5s ease;
+  transition: 1s ease;
 }
 
 .container:hover .image {
@@ -72,7 +72,8 @@
 .parent{
     display:flex;
     width:50%;
-    background-color:#F2E5BF;
+    background-color:#96afb1;
+    border-radius:8px;
 }
         .auto-style8 {
             width: 100%;
@@ -87,7 +88,26 @@
            font-weight:500;
            border-radius:10px;
         }
-
+       .grid{
+           background-color: #f1ba52;
+           color:black;
+           float:left;
+          
+           width:100%;
+       }
+       .grid:hover{
+           background-color:#f1ba52;
+         
+           color:white;
+           transition:1s;
+       }
+       body {
+    background-color: #d6d6f5;
+    background-image: url('photus/college.jpg');
+    background-size: 100%;
+    width: 100%;
+    font-family: cursive;
+}
     </style>
     </head>
 <body >  
@@ -115,7 +135,7 @@
                 <br />
             </div>
         </div>
-        <div style="float:left">
+        <div style="float:left; width:100%; margin-left: 20%; background-color:transparent" >
         <div style=" height:50%;   border:1px solid black; margin-top: 1px;" class="parent" id="tops">
 
         <div class="container">
@@ -175,15 +195,15 @@
                               <div class="container">
               <img src="photus/notice-removebg-preview.png" alt="Avatar" class="image" />
               <div class="middle">
-                <div class="text"><asp:Button ID="Button9" runat="server" Text="Notice (edit)" CssClass="button" /></div>
+                <div class="text"><asp:Button ID="Button9" runat="server" Text="Notice (edit)" CssClass="button" OnClick="click" /></div>
               </div>
             </div>
         </div>
             </div>
-        <div style=" float:left;">Notification </div>
-        <br />
-        <asp:GridView runat="server" OnSelectedIndexChanged="Unnamed1_SelectedIndexChanged" DataSourceID="SqlDataSource1"></asp:GridView>
+      <div>
+        <asp:GridView runat="server" OnSelectedIndexChanged="Unnamed1_SelectedIndexChanged" DataSourceID="SqlDataSource1" CssClass="grid"></asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Notification %>" SelectCommand="SELECT [Date], [Notice] FROM [Notification]"></asp:SqlDataSource>
-        </form>
+        </div>
+          </form>
     </body>
 </html>

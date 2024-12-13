@@ -77,6 +77,7 @@
     <Content Include="Attendence.aspx" />
     <Content Include="Attendence.css" />
     <Content Include="Attendence.js" />
+    <Content Include="Attendencedemo.aspx" />
     <Content Include="Faculty.aspx" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="Students.aspx" />
@@ -123,6 +124,13 @@
     </Compile>
     <Compile Include="Attendence.aspx.designer.cs">
       <DependentUpon>Attendence.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendencedemo.aspx.cs">
+      <DependentUpon>Attendencedemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendencedemo.aspx.designer.cs">
+      <DependentUpon>Attendencedemo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Faculty.aspx.cs">
       <DependentUpon>Faculty.aspx</DependentUpon>

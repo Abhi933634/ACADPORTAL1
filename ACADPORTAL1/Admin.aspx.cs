@@ -25,6 +25,10 @@ namespace ACADPORTAL1
         {
             Response.Redirect("TimeTable.aspx");
         }
+        protected void click(object sender, EventArgs e) 
+        {
+            Response.Redirect("Notices.aspx");
+        }
         protected void Unnamed1_SelectedIndexChanged(object sender, EventArgs e)
         {
 

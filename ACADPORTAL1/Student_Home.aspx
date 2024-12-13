@@ -44,7 +44,7 @@
             color:black;
         }
         .auto-style12 {
-            height: 100%;
+            height: 37%;
             width:100%;
             margin-left: 136px;
         }
