@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml.Linq;
+using System.Xml;
 
 namespace ACADPORTAL1
 {
@@ -11,20 +14,22 @@ namespace ACADPORTAL1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Session["Email"] != null)
-            //{
-            //    //lblUserID.Text = Session["UserID"].ToString();
-            //    //Labelname.Text = Session["Username"].ToString();
-            //    //lblFullName.Text = Session["FullName"].ToString();
-            //    //lblEmail.Text = Session["Email"].ToString();
-            //    //Labelname
-
-
-            //}
-            //else
-            //{ // Redirect to login page if session is null
-            //    Response. Redirect("Login.aspx");
-            //}
+            if (Session["Name"] != null)
+            {
+                Labelname.Text = Session["Name"].ToString();
+            }
+            if (Session["Mobile"] != null)
+            {
+                Labelmobile.Text = Session["Mobile"].ToString();
+            }
+            if (Session["Email"] != null)
+            {
+                Labelemail.Text = Session["Email"].ToString();
+            }
+            if (Session["Enroll"] != null)
+            {
+                LabelEnroll.Text = Session["Enroll"].ToString();
+            }
         }
         protected void Button1_Click(object sender, EventArgs e)
         {

@@ -54,6 +54,10 @@
                 </asp:TableRow>
            
             </asp:Table>
+            <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:ListItem>teacher</asp:ListItem>
+                <asp:ListItem>student</asp:ListItem>
+            </asp:DropDownList>
         </div>
     </form>
 </body>

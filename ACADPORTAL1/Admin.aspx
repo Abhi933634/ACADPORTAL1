@@ -42,7 +42,7 @@
   bottom: 100%;
   left: 0;
   right: 0;
-  background-color: #white;
+  background-color:transparent;
   overflow: hidden;
   width: 100%;
   height:0;
@@ -71,9 +71,11 @@
 }
 .parent{
     display:flex;
-    width:50%;
-    background-color:#96afb1;
+    width:75%;
+    margin-left:10%;
+    background-color:#c3cb7e;
     border-radius:8px;
+    border-collapse:collapse;
 }
         .auto-style8 {
             width: 100%;
@@ -135,7 +137,7 @@
                 <br />
             </div>
         </div>
-        <div style="float:left; width:100%; margin-left: 20%; background-color:transparent" >
+        <div style="float:left; width:100%; margin-left: 1%; background-color:transparent" >
         <div style=" height:50%;   border:1px solid black; margin-top: 1px;" class="parent" id="tops">
 
         <div class="container">
@@ -201,8 +203,8 @@
         </div>
             </div>
       <div>
-        <asp:GridView runat="server" OnSelectedIndexChanged="Unnamed1_SelectedIndexChanged" DataSourceID="SqlDataSource1" CssClass="grid"></asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Notification %>" SelectCommand="SELECT [Date], [Notice] FROM [Notification]"></asp:SqlDataSource>
+        <asp:GridView runat="server" OnSelectedIndexChanged="Unnamed1_SelectedIndexChanged" DataSourceID="SqlDataSource1" CssClass="grid"></asp:GridView>
         </div>
           </form>
     </body>

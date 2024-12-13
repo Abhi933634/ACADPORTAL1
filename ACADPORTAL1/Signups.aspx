@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Signup</title>
-   <script src="Signups.js"></script>
+
                  <style type="text/css">
                      .auto-style15 {
                          width: 537px;
@@ -21,7 +21,7 @@
                      }
                      .auto-style19 {
                          height: 691px;
-                         width: 533px;
+                         width: 469px;
                          margin-left: 381px;
                      }
                      .auto-style20 {
@@ -45,15 +45,78 @@
                          height: 37px;
                      }
                  </style>
-                    <script>
-                       
-}
+                    <script type="text/javascript">
+                        function validateForm() {
+                            // Validate Name
+                            var name = document.getElementById("<%= TextBox1.ClientID %>").value;
+        if (name == "") {
+            alert("Name is required");
+            return false;
+        }
+
+        // Validate Father's Name
+        var fatherName = document.getElementById("<%= TextBox2.ClientID %>").value;
+        if (fatherName == "") {
+            alert("Father's Name is required");
+            return false;
+        }
+
+        // Validate Mother's Name
+        var motherName = document.getElementById("<%= TextBox3.ClientID %>").value;
+        if (motherName == "") {
+            alert("Mother's Name is required");
+            return false;
+        }
+
+        // Validate Date of Birth
+        var day = document.getElementById("<%= DropDownList2.ClientID %>").value;
+        var month = document.getElementById("<%= DropDownList3.ClientID %>").value;
+        var year = document.getElementById("<%= DropDownList4.ClientID %>").value;
+        if (day == "" || month == "Month" || year == "year") {
+            alert("Date of Birth is required");
+            return false;
+        }
+
+        // Validate Mobile Number
+        var mobile = document.getElementById("<%= txtmobile.ClientID %>").value;
+        var mobileRegex = /^[0-9]{10}$/;
+        if (!mobileRegex.test(mobile)) {
+            alert("Please enter a valid 10-digit mobile number");
+            return false;
+        }
+
+        // Validate Email
+        var email = document.getElementById("<%= TextBox4.ClientID %>").value;
+        var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address");
+            return false;
+        }
+
+        // Validate Password
+        var password = document.getElementById("<%= TextBox9.ClientID %>").value;
+        if (password == "") {
+            alert("Password is required");
+            return false;
+        }
+
+        // Validate Enrollment Number
+        var enrollment = document.getElementById("<%= TextBox10.ClientID %>").value;
+                            if (enrollment == "") {
+                                alert("Enrollment Number is required");
+                                return false;
+                            }
+
+                            // If all validations pass, submit the form
+                            return true;
+                        }
                     </script>
+    
                  <h1 class="auto-style21">ACADPORTAL: CLASSIC TO SMART DEPARTMENT</h1>
                 <link href="Signups.css" rel="stylesheet"/>
 </head>
 <body style="width: 94%; height: 804px;">
-    <form id="form1" runat="server" class="auto-style19" onsubmit="return validateform() " method="post">
+    <form id="form1" runat="server" class="auto-style19" onsubmit= "validateForm()" method="post">
         
             <table class="auto-style17">
                 <tr>
@@ -63,20 +126,20 @@
                                 <tr>
                                     <td class="auto-style9">Name :</td>
                                     <td class="auto-style10">
-                                        <asp:TextBox ID="TextBox1" runat="server" CausesValidation="True" OnDataBinding="Button1_Click" OnTextChanged="TextBox1_TextChanged" name="fname" type="text"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox1" runat="server" CausesValidation="True" OnDataBinding="Button1_Click" OnTextChanged="TextBox1_TextChanged" name="fname" type="string"></asp:TextBox>
                                         
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style6">Father&#39;s Name :</td>
                                     <td>
-                                        <asp:TextBox ID="TextBox2" runat="server" type="text"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox2" runat="server" type="string"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style6">Mother&#39;s name :</td>
                                     <td>
-                                        <asp:TextBox ID="TextBox3" runat="server" OnTextChanged="TextBox3_TextChanged" type="text"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox3" runat="server" OnTextChanged="TextBox3_TextChanged" type="string"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -189,9 +252,9 @@
                                 <tr>
                                     <td class="auto-style11">Gender :</td>
                                     <td class="auto-style12">
-                                        <asp:RadioButton ID="Male" runat="server" Text="Male" />
-                                        <asp:RadioButton ID="Female" runat="server" Text="Female" />
-                                        <asp:RadioButton ID="Other" runat="server" Text="Other" />
+                                        <asp:RadioButton ID="Male" runat="server" Text="Male" GroupName="g" />
+                                        <asp:RadioButton ID="Female" runat="server" Text="Female" GroupName="g" />
+                                        <asp:RadioButton ID="Other" runat="server" Text="Other" GroupName="g" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -210,7 +273,7 @@
                                 <tr>
                                     <td class="auto-style6">Mobile no. :</td>
                                     <td>
-                                        <asp:TextBox ID="txtmobile" runat="server" type="tel"></asp:TextBox>
+                                        <asp:TextBox ID="txtmobile" runat="server" type="number"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -246,13 +309,13 @@
                                 <tr>
                                     <td class="auto-style6">Password :</td>
                                     <td>
-                                        <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox9" runat="server" type="password"></asp:TextBox>
                                     </td>
                                 </tr>
                                                       <tr>
                           <td class="auto-style6">Enrollment No.</td>
                           <td>
-                              <asp:TextBox ID="TextBox10" runat="server" OnTextChanged="TextBox10_TextChanged"></asp:TextBox>
+                              <asp:TextBox ID="TextBox10" runat="server" OnTextChanged="TextBox10_TextChanged"  type="text"></asp:TextBox>
                           </td>
                       </tr>
                                 <tr>

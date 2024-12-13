@@ -11,7 +11,18 @@ namespace ACADPORTAL1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["UserName"] != null)
+            {
+                namelabel.Text = Session["UserName"].ToString();
+            }
+            if (Session["Name"] != null)
+            {
+                name.Text = Session["Name"].ToString();
+            }
+            if (Session["Mobile"] != null)
+            {
+                mobile.Text = Session["Mobile"].ToString();
+            }
         }
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
@@ -44,7 +55,7 @@ namespace ACADPORTAL1
         protected void btnTimetable_Click(object sender, EventArgs e)
         {
             // Redirect to the Timetable page
-            Response.Redirect("Timetable.aspx");
+            Response.Redirect("ttall.aspx");
         }
         protected void btnResult_Click(object sender, EventArgs e)
         {
@@ -54,13 +65,14 @@ namespace ACADPORTAL1
         protected void btnAttendance_Click(object sender, EventArgs e)
         {
             // Redirect to the Attendance page
-            Response.Redirect("Attendance.aspx");
+            Response.Redirect("Attendence.aspx");
         }
         protected void btnNotes_Click(object sender, EventArgs e)
         {
             // Redirect to the Notes page
             Response.Redirect("Notes.aspx");
         }
+
     }
 
 

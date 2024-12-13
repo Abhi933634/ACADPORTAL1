@@ -19,6 +19,8 @@ namespace ACADPORTAL1
 {
     public partial class Login_signup : System.Web.UI.Page
     {
+        public string username;
+        public string password;
         public object Password { get; private set; }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -90,7 +92,7 @@ namespace ACADPORTAL1
                     string Email = TextBox1.Text;
                     string Password = TextBox2.Text;
                     con.Open();
-                    string qry = "select Email,Password from Register where Email=@Email and Password=@Password";
+                    string qry = "select Email,Password,MobileNo,Enroll,Name from Register where Email=@Email and Password=@Password";
                     SqlCommand cmd = new SqlCommand(qry, con);
 
                     cmd.Parameters.AddWithValue("@Email", Email);
@@ -98,8 +100,23 @@ namespace ACADPORTAL1
                     SqlDataReader sdr = cmd.ExecuteReader();
                     if (sdr.HasRows == true)
                     {
+                        while (sdr.Read())
+                        {
+                            Session["Name"] = sdr.GetString(4);
+                            Session["Mobile"] = Convert.ToUInt32(sdr.GetSqlString(2));
+                            Session["Enroll"] = sdr.GetString(3);
+                            Session["Email"] = sdr.GetString(0);
+                            // Session["UserName"] = TextBox1.Text;
+                        }
+                        //Session["UserName"] = Email; 
+                        //Session["Name"] = name; 
+                        //Session["Mobile"] = mobile; 
                         Response.Redirect("Student_Home.aspx");
-
+                        //name = sdr.GetString(1);
+                        //mobile = sdr.GetString(3);
+                        //Session["UserName"] = Email;
+                        //Session["Name"] = name;
+                        //Session["Mobile"] = mobile;
                     }
                     else
                     {
@@ -118,21 +135,30 @@ namespace ACADPORTAL1
             }
             else if(ddl1 == "Teacher")
             {
-                try
-                {
+                //try
+                //{
                     string Email = TextBox1.Text;
                     string Password = TextBox2.Text;
+                    //string mobile;
+                    //string name;
                     con.Open();
-                    string qry = "select Email,Password from Faculty where Email=@Email and Password=@Email";
-                    SqlCommand cmd = new SqlCommand(qry, con);
 
+                    string qry = "select Email,Password,Name,Mobile from Faculty where Email=@Email and Password=@Password";
+                    SqlCommand cmd = new SqlCommand(qry, con);
+                    
                     cmd.Parameters.AddWithValue("@Email", Email);
                     cmd.Parameters.AddWithValue("@Password", Password);
                     SqlDataReader sdr = cmd.ExecuteReader();
                     if (sdr.HasRows == true)
                     {
+                    while (sdr.Read())
+                    { 
+                        Session["Name"] = sdr.GetString(2);
+                        Session["Mobile"] = sdr.GetString(3);
+                        Session["UserName"] = TextBox1.Text;
+                    }
+                    
                         Response.Redirect("Home1teacher.aspx");
-
                     }
                     else
                     {
@@ -140,25 +166,26 @@ namespace ACADPORTAL1
                     }
                 }
 
-                catch (Exception ex)
-                {
-                    Response.Write(ex.Message);
-                }
-                finally
-                {
-                    con.Close();
-                }
-            }
-            else
-            {
 
+                //catch (Exception ex)
+                //{
+                //    Response.Write(ex.Message);
+                //}
+                //finally
+                //{
+                //    con.Close();
+                //}
             }
-        }
-        protected void TextBox2_TextChanged2(object sender, EventArgs e)
-        {
+            //else
+            //{
 
+            //}
         }
-        
-    }
-    
+    //protected void TextBox2_TextChanged2(object sender, EventArgs e)
+    //{
+
+    //}
+
 }
+   
+//}

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home1teacher.aspx.cs" Inherits="ACADPORTAL1.Home1teacher" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Attendence.aspx.cs" Inherits="ACADPORTAL1.Attendence" %>
 
 <!DOCTYPE html>
 
@@ -8,40 +8,43 @@
     <link rel="stylesheet" href="Home1teacher.css"/>
     <script src="Home1teacher.js"></script>
     <style>
-
         .auto-style9 {
             height: 441px;
         }
-        #ddl1{
-            margin-left:10%;
-            float:left;
+
+        #ddl1 {
+            margin-left: 10%;
+            float: left;
         }
-        #ddl2{
-            margin-left:15%;
-            float:left;
-            margin-top:1%;
+
+        #ddl2 {
+            margin-left: 15%;
+            float: left;
+            margin-top: 1%;
         }
+
         .auto-style10 {
             width: 30%;
-            margin-top:1%;
+            margin-top: 1%;
         }
-         table, th, td {
-          border:1px solid black;
-          border-collapse: collapse;
-          background-color:white;
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            background-color: white;
         }
-         #show{
-             margin-top:1%;
-            margin-left:30%;
-         }
+
+        #show {
+            margin-top: 1%;
+            margin-left: 30%;
+        }
+
         .auto-style11 {
             width: 329px;
             margin-left: 13%;
         }
-        .auto-style12 {
-            margin-left: 38%;
-        }
-    </style>
+
+        </style>
     </head>
 <body> 
     <form id="form1" runat="server" class="auto-style9">
@@ -68,7 +71,7 @@
             </div>
         </div>
         <div id="ddl1" class="auto-style10">
-            <asp:Label ID="Label1" runat="server" Text="Subject"></asp:Label>&nbsp; <asp:DropDownList ID="DropDownList1" runat="server">
+            <asp:Label ID="Label1" runat="server" Text="Subject"></asp:Label>&nbsp; <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
                 <asp:ListItem>Select</asp:ListItem>
                 <asp:ListItem>C++</asp:ListItem>
                 <asp:ListItem>C#</asp:ListItem>
@@ -85,102 +88,50 @@
             </asp:DropDownList>
             </div>
             <div id="ddl2" class="auto-style11">
-            <asp:Label ID="Label2" runat="server" Text="Semester"></asp:Label>&nbsp; <asp:DropDownList ID="DropDownList2" runat="server">
-                <asp:ListItem>Select</asp:ListItem>
-                <asp:ListItem>i</asp:ListItem>
-                <asp:ListItem>ii</asp:ListItem>
-                <asp:ListItem>iii</asp:ListItem>
-                <asp:ListItem>iv</asp:ListItem>
-                <asp:ListItem>v</asp:ListItem>
-                <asp:ListItem>vi</asp:ListItem>
-            </asp:DropDownList>
+            <asp:Label ID="Label2" runat="server" Text="Semester"></asp:Label>&nbsp; 
+                <asp:DropDownList ID="DropDownList2" runat="server" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged">
+                    <asp:ListItem>select</asp:ListItem>
+                    <asp:ListItem>I</asp:ListItem>
+                    <asp:ListItem>II</asp:ListItem>
+                    <asp:ListItem>III</asp:ListItem>
+                    <asp:ListItem>IV</asp:ListItem>
+                    <asp:ListItem>V</asp:ListItem>
+                    <asp:ListItem>VI</asp:ListItem>
+                </asp:DropDownList>
+            <asp:Button ID="Button1" runat="server" Text="Show" OnClick="Button1_Click1" />
         </div>
-        <div id="show" class="auto-style12">
-            <asp:Button ID="Button1" runat="server" Text="Show" /></div>
+        
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="id" DataSourceID="SqlDataSource1" GridLines="Vertical">
+                <AlternatingRowStyle BackColor="Gainsboro" />
+                <Columns>
+                    <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
+                    <asp:BoundField DataField="Enroll" HeaderText="Enroll" SortExpression="Enroll" />
+                    <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+                    <asp:TemplateField HeaderText="Attendence">
+                        <ItemTemplate>
+                            <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+                                <asp:ListItem>Present</asp:ListItem>
+                                <asp:ListItem>Absent</asp:ListItem>
+                            </asp:RadioButtonList>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+                <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+                <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+                <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#0000A9" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#000065" />
+        </asp:GridView>
+        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="save" />
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AcadPortalConnectionString8 %>" ProviderName="<%$ ConnectionStrings:AcadPortalConnectionString8.ProviderName %>" SelectCommand="SELECT [id], [Enroll], [Name] FROM [Register]"></asp:SqlDataSource>
         
             <br />
         
             <br />
-        
-            <asp:Table runat="server" style="width:100%; border: 1px solid black; text-align:center">
-                                  <asp:TableRow>
-                      <asp:TableCell>ID</asp:TableCell>
-                      <asp:TableCell>Enrollment no.</asp:TableCell>
-                      <asp:TableCell>Name</asp:TableCell>
-                      <asp:TableCell>Present</asp:TableCell>
-                      <asp:TableCell>Absent</asp:TableCell>
-                  </asp:TableRow>
-                <asp:TableRow>
-                    <asp:TableCell>1</asp:TableCell>
-                    <asp:TableCell>ecc1</asp:TableCell>
-                    <asp:TableCell>a</asp:TableCell>
-                    <asp:TableCell><asp:RadioButton ID="RadioButton1" runat="server" /></asp:TableCell>
-                    <asp:TableCell><asp:RadioButton ID="RadioButton2" runat="server" /></asp:TableCell>
-                </asp:TableRow>
-                <asp:TableRow>
-                    <asp:TableCell>2</asp:TableCell>
-                    <asp:TableCell>ecc2</asp:TableCell>
-                    <asp:TableCell>b</asp:TableCell>
-                    <asp:TableCell><asp:RadioButton ID="RadioButton3" runat="server" /></asp:TableCell>
-                    <asp:TableCell><asp:RadioButton ID="RadioButton4" runat="server" /></asp:TableCell>
-                </asp:TableRow>
-                <asp:TableRow>
-                    <asp:TableCell>3</asp:TableCell>
-                    <asp:TableCell>ecc3</asp:TableCell>
-                    <asp:TableCell>c</asp:TableCell>
-                    <asp:TableCell><asp:RadioButton ID="RadioButton5" runat="server" /></asp:TableCell>
-                    <asp:TableCell><asp:RadioButton ID="RadioButton6" runat="server" /></asp:TableCell>
-                </asp:TableRow>
-                <asp:TableRow>
-                    <asp:TableCell>4</asp:TableCell>
-                    <asp:TableCell>ecc4</asp:TableCell>
-                    <asp:TableCell>d</asp:TableCell>
-                    <asp:TableCell><asp:RadioButton ID="RadioButton7" runat="server" /></asp:TableCell>
-                    <asp:TableCell><asp:RadioButton ID="RadioButton8" runat="server" /></asp:TableCell>
-                </asp:TableRow>
-                <asp:TableRow>
-                    <asp:TableCell>5</asp:TableCell>
-                    <asp:TableCell>ecc5</asp:TableCell>
-                    <asp:TableCell>e</asp:TableCell>
-                    <asp:TableCell><asp:RadioButton ID="RadioButton9" runat="server" /></asp:TableCell>
-                    <asp:TableCell><asp:RadioButton ID="RadioButton10" runat="server" /></asp:TableCell>
-                </asp:TableRow>
-                <asp:TableRow>
-                    <asp:TableCell>6</asp:TableCell>
-                    <asp:TableCell>ecc6</asp:TableCell>
-                    <asp:TableCell>f</asp:TableCell>
-                    <asp:TableCell><asp:RadioButton ID="RadioButton11" runat="server" /></asp:TableCell>
-                    <asp:TableCell><asp:RadioButton ID="RadioButton12" runat="server" /></asp:TableCell>
-                </asp:TableRow>
-                <asp:TableRow>
-                    <asp:TableCell>7</asp:TableCell>
-                    <asp:TableCell>ecc7</asp:TableCell>
-                    <asp:TableCell>g</asp:TableCell>
-                    <asp:TableCell><asp:RadioButton ID="RadioButton13" runat="server" /></asp:TableCell>
-                    <asp:TableCell><asp:RadioButton ID="RadioButton14" runat="server" /></asp:TableCell>
-                </asp:TableRow>
-                <asp:TableRow>
-                    <asp:TableCell>8</asp:TableCell>
-                    <asp:TableCell>ecc8</asp:TableCell>
-                    <asp:TableCell>h</asp:TableCell>
-                    <asp:TableCell><asp:RadioButton ID="RadioButton15" runat="server" /></asp:TableCell>
-                    <asp:TableCell><asp:RadioButton ID="RadioButton16" runat="server" /></asp:TableCell>
-                </asp:TableRow>
-                <asp:TableRow>
-                    <asp:TableCell>9</asp:TableCell>
-                    <asp:TableCell>ecc9</asp:TableCell>
-                    <asp:TableCell>i</asp:TableCell>
-                    <asp:TableCell><asp:RadioButton ID="RadioButton17" runat="server" /></asp:TableCell>
-                    <asp:TableCell><asp:RadioButton ID="RadioButton18" runat="server" /></asp:TableCell>
-                </asp:TableRow>
-                <asp:TableRow>
-                    <asp:TableCell>10</asp:TableCell>
-                    <asp:TableCell>ecc10</asp:TableCell>
-                    <asp:TableCell>j</asp:TableCell>
-                    <asp:TableCell><asp:RadioButton ID="RadioButton19" runat="server" /></asp:TableCell>
-                    <asp:TableCell><asp:RadioButton ID="RadioButton20" runat="server" /></asp:TableCell>
-                </asp:TableRow>
-            </asp:Table>
         
     </form>
     </body>

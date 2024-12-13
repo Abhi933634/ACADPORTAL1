@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="Home1teacher.css"/>
     <script src="Home1teacher.js"></script>
     <style>
+        *{
+            font-family:cursive;
+        }
         Panel1{
             background-color:black;
         }
@@ -42,6 +45,18 @@
             width:100%;
             margin-left: 136px;
         }
+        .auto-style13 {
+            
+            overflow: hidden;
+            position: relative;
+            background-color: #c3cb7e;
+            width: 100%;
+        }
+        .auto-style14 {
+            margin-left: 520px;
+            font-size:40px;
+
+        }
     </style>
     </head>
 <body>
@@ -70,31 +85,17 @@
                 <br />
             </div>
         </div>
-  <div class="example1">
-    <asp:Panel ID="Panel" runat="server" CssClass="auto-style10" Height="284px" Width="516px">
-        <asp:Table ID="Table" runat="server" CssClass="auto-style11" Height="245px" Width="471px">
-            <asp:TableRow>
-                <asp:TableCell>Name</asp:TableCell>
-                <asp:TableCell>
-                    <asp:Label ID="Labelname" runat="server" Text="Label" Enabled="True"></asp:Label></asp:TableCell>
-            </asp:TableRow>
-             <asp:TableRow>
-            <asp:TableCell>Mobile no.</asp:TableCell>
-            <asp:TableCell>
-                <asp:Label ID="Labelmobile" runat="server" Text="Label"></asp:Label></asp:TableCell>
-        </asp:TableRow>
-                               <asp:TableRow>
-               <asp:TableCell>Enrollment no.</asp:TableCell>
-               <asp:TableCell>
-                   <asp:Label ID="LabelEnroll" runat="server" Text="Label"></asp:Label></asp:TableCell>
-           </asp:TableRow>
-            <asp:TableRow>
-           <asp:TableCell>E-mail</asp:TableCell>
-           <asp:TableCell>
-               <asp:Label ID="Labelemail" runat="server" Text="Label"></asp:Label></asp:TableCell>
-       </asp:TableRow>
-        </asp:Table>
-    </asp:Panel>
+  <div class="auto-style13">
+      <p class="auto-style14">
+      Email:&nbsp;&nbsp;
+      <asp:Label ID="namelabel" runat="server" Text="Label"></asp:Label>
+      <br />
+      Name:&nbsp;&nbsp;
+      <asp:Label ID="name" runat="server" Text="Label"></asp:Label>
+&nbsp;<br />
+      Mobile: <asp:Label ID="mobile" runat="server" Text="Label"></asp:Label>
+      <br />
+      </p>
 </div>
                
             <div class="auto-style12">
