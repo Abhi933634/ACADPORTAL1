@@ -74,34 +74,6 @@ namespace ACADPORTAL1
                         }
                     }
                 }
-                { // Handle the case where the RadioButtonList is not found Response.Write("RadioButtonList1 not found in row."); } }
-                  //DateTime now = DateTime.Now;
-                  //string t = DateTime.Now.ToString("M-d-yyyy");
-                  //Response.Write(t);
-                  //Response.Write(now.ToString());
-                  ////foreach (GridViewRow row in GridView1.Rows)
-                  ////{
-
-                    ////}
-                    //SqlConnection con = new SqlConnection("Data Source=LAPTOP-2HMQEB1H\\SQLEXPRESS;Initial Catalog=AcadPortal;Integrated Security=True");
-
-                    //// String query1 = "insert into Register values (@Name,@FatherName ,@MotherName ,@DateOfBirth ,@Gender, @Department,@MobileNo ,@Email ,@PermanenetAddress ,@State,@City ,@Pincode ,@Password,@Enroll) ";
-                    //foreach (GridViewRow gr in GridView1.Rows)
-                    //{
-                    //    RadioButtonList RadioButtonList1 = gr.FindControl("RadioButton1 nList1")
-                    //                                          as RadioButtonList;
-                    //    gr.Cells[3].Text = RadioButtonList1.SelectedValue;
-                    //    String query = "insert into Attendence values (@Name,@Enroll,@Date_,@Attendence) ";
-                    //    SqlCommand cmd = new SqlCommand(query, con);
-                    //    cmd.ExecuteNonQuery();
-
-                    //    cmd.Parameters.AddWithValue("@Name", gr.Cells[0].Text);
-                    //    cmd.Parameters.AddWithValue("@Enroll", gr.Cells[1].Text);
-                    //    cmd.Parameters.AddWithValue("@Date_", t);
-
-                    //    cmd.Parameters.AddWithValue("@Attendence", gr.Cells[3].Text);
-                    //    con.Open();
-                }
             }
         }
     }

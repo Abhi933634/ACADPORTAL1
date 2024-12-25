@@ -37,7 +37,6 @@
 <body>
     <form id="form1" runat="server">
         <div>
-         <asp:Button ID="Button1" runat="server" Text="&#x2190;" Height="43px" Width="53px" OnClick="admin" />
  <h1 style="text-align:center;" class="auto-style1">Time Table (Semester 5th)</h1></div>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource1" CssClass="gridview1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
             <Columns>

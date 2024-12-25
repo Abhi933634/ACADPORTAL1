@@ -44,6 +44,17 @@
             margin-left: 13%;
         }
 
+        .auto-style12 {
+            margin-left: 224px;
+            background-color:aqua;
+            border-radius:15px;
+            font-size:20px;
+        }
+        .auto-style12::after{
+            background-color:white;
+            color:black;
+        }
+
         </style>
     </head>
 <body> 
@@ -98,10 +109,9 @@
                     <asp:ListItem>V</asp:ListItem>
                     <asp:ListItem>VI</asp:ListItem>
                 </asp:DropDownList>
-            <asp:Button ID="Button1" runat="server" Text="Show" OnClick="Button1_Click1" />
         </div>
         
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="id" DataSourceID="SqlDataSource1" GridLines="Vertical">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="id" DataSourceID="SqlDataSource1" GridLines="Vertical" Width="1513px">
                 <AlternatingRowStyle BackColor="Gainsboro" />
                 <Columns>
                     <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
@@ -126,7 +136,8 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#000065" />
         </asp:GridView>
-        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="save" />
+        <br />
+        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="save" CssClass="auto-style12" Width="795px" Height="65px"  />
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AcadPortalConnectionString8 %>" ProviderName="<%$ ConnectionStrings:AcadPortalConnectionString8.ProviderName %>" SelectCommand="SELECT [id], [Enroll], [Name] FROM [Register]"></asp:SqlDataSource>
         
             <br />

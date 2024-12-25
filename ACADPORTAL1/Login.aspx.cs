@@ -103,7 +103,7 @@ namespace ACADPORTAL1
                         while (sdr.Read())
                         {
                             Session["Name"] = sdr.GetString(4);
-                            Session["Mobile"] = Convert.ToUInt32(sdr.GetSqlString(2));
+                         //   Session["Mobile"] = Convert.ToUInt32(sdr.GetSqlString(2));
                             Session["Enroll"] = sdr.GetString(3);
                             Session["Email"] = sdr.GetString(0);
                             // Session["UserName"] = TextBox1.Text;
